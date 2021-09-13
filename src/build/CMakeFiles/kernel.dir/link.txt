@@ -1,0 +1,1 @@
+/usr/bin/g++-10  -Wall -Wextra -march=cooperlake   CMakeFiles/kernel.dir/driver.cpp.o  -o kernel  measurement/libmeasurement.a setup/libsetup.a /usr/lib/gcc/x86_64-linux-gnu/10/libgomp.so /usr/lib/x86_64-linux-gnu/libpthread.so bfloat/libbfloat.a io/libio.a 

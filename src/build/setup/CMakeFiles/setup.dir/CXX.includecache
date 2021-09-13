@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../bfloat/bfloat.hpp
+immintrin.h
+-
+bitset
+-
+cstring
+-
+iostream
+-
+vector
+-
+
+/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/setup/setup.cpp
+setup.hpp
+/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/setup/setup.hpp
+
+/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/setup/setup.hpp
+immintrin.h
+-
+omp.h
+-
+algorithm
+-
+iostream
+-
+iterator
+-
+limits
+-
+random
+-
+vector
+-
+bfloat.hpp
+/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/setup/bfloat.hpp
+
