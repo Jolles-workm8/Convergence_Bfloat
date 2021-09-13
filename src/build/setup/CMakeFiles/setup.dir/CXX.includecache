@@ -7,8 +7,6 @@
 #IncludeRegexTransform: 
 
 ../bfloat/bfloat.hpp
-immintrin.h
--
 bitset
 -
 cstring
@@ -18,16 +16,16 @@ iostream
 vector
 -
 
-/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/setup/setup.cpp
+/home/su72mej/Convergence_bfloat16/src/setup/setup.cpp
 setup.hpp
-/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/setup/setup.hpp
+/home/su72mej/Convergence_bfloat16/src/setup/setup.hpp
 
-/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/setup/setup.hpp
-immintrin.h
--
-omp.h
--
+/home/su72mej/Convergence_bfloat16/src/setup/setup.hpp
+bfloat.hpp
+/home/su72mej/Convergence_bfloat16/src/setup/bfloat.hpp
 algorithm
+-
+immintrin.h
 -
 iostream
 -
@@ -35,10 +33,10 @@ iterator
 -
 limits
 -
+omp.h
+-
 random
 -
 vector
 -
-bfloat.hpp
-/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/setup/bfloat.hpp
 

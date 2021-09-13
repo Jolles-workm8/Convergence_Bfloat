@@ -7,8 +7,6 @@
 #IncludeRegexTransform: 
 
 ../bfloat/bfloat.hpp
-immintrin.h
--
 bitset
 -
 cstring
@@ -35,23 +33,23 @@ vector
 -
 
 ../measurement/measurement.hpp
+io.hpp
+../measurement/io.hpp
+setup.hpp
+../measurement/setup.hpp
 cmath
 -
 iostream
 -
 vector
 -
-io.hpp
-../measurement/io.hpp
-setup.hpp
-../measurement/setup.hpp
 
 ../setup/setup.hpp
-immintrin.h
--
-omp.h
--
+bfloat.hpp
+../setup/bfloat.hpp
 algorithm
+-
+immintrin.h
 -
 iostream
 -
@@ -59,26 +57,26 @@ iterator
 -
 limits
 -
+omp.h
+-
 random
 -
 vector
 -
-bfloat.hpp
-../setup/bfloat.hpp
 
-/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/driver.cpp
-omp.h
--
+/home/su72mej/Convergence_bfloat16/src/driver.cpp
+io.hpp
+/home/su72mej/Convergence_bfloat16/src/io.hpp
+measurement.hpp
+/home/su72mej/Convergence_bfloat16/src/measurement.hpp
+setup.hpp
+/home/su72mej/Convergence_bfloat16/src/setup.hpp
 iostream
 -
 limits
 -
+omp.h
+-
 vector
 -
-io.hpp
-/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/io.hpp
-measurement.hpp
-/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/measurement.hpp
-setup.hpp
-/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/setup.hpp
 

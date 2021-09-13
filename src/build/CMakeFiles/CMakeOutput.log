@@ -1,6 +1,6 @@
-The system is: Linux - 5.11.0-27-generic - x86_64
+The system is: Linux - 3.10.0-957.1.3.el7.x86_64 - x86_64
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
-Compiler: /usr/bin/g++-10 
+Compiler: /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/bin/g++ 
 Build flags: 
 Id flags:  
 
@@ -10,212 +10,201 @@ The output was:
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
 
-The CXX compiler identification is GNU, found in "/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/build/CMakeFiles/3.16.3/CompilerIdCXX/a.out"
+The CXX compiler identification is GNU, found in "/home/su72mej/Convergence_bfloat16/src/build/CMakeFiles/3.15.3/CompilerIdCXX/a.out"
 
 Determining if the CXX compiler works passed with the following output:
-Change Dir: /home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp
+Change Dir: /home/su72mej/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_6fb25/fast && /usr/bin/make -f CMakeFiles/cmTC_6fb25.dir/build.make CMakeFiles/cmTC_6fb25.dir/build
-make[1]: Entering directory '/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_6fb25.dir/testCXXCompiler.cxx.o
-/usr/bin/g++-10     -o CMakeFiles/cmTC_6fb25.dir/testCXXCompiler.cxx.o -c /home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_6fb25
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6fb25.dir/link.txt --verbose=1
-/usr/bin/g++-10       CMakeFiles/cmTC_6fb25.dir/testCXXCompiler.cxx.o  -o cmTC_6fb25 
-make[1]: Leaving directory '/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp'
+Run Build Command(s):/usr/bin/gmake cmTC_1a048/fast && /usr/bin/gmake -f CMakeFiles/cmTC_1a048.dir/build.make CMakeFiles/cmTC_1a048.dir/build
+gmake[1]: Entering directory `/home/su72mej/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_1a048.dir/testCXXCompiler.cxx.o
+/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/bin/g++     -o CMakeFiles/cmTC_1a048.dir/testCXXCompiler.cxx.o -c /home/su72mej/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_1a048
+/cluster/tools/cmake/cmake-3.15.3-Linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1a048.dir/link.txt --verbose=1
+/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/bin/g++       CMakeFiles/cmTC_1a048.dir/testCXXCompiler.cxx.o  -o cmTC_1a048 
+gmake[1]: Leaving directory `/home/su72mej/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp'
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp
+Change Dir: /home/su72mej/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_fac20/fast && /usr/bin/make -f CMakeFiles/cmTC_fac20.dir/build.make CMakeFiles/cmTC_fac20.dir/build
-make[1]: Entering directory '/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_fac20.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/g++-10    -v -o CMakeFiles/cmTC_fac20.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp
-Using built-in specs.
-COLLECT_GCC=/usr/bin/g++-10
-OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa:hsa
-OFFLOAD_TARGET_DEFAULT=1
-Target: x86_64-linux-gnu
-Configured with: ../src/configure -v --with-pkgversion='Ubuntu 10.3.0-1ubuntu1~20.04' --with-bugurl=file:///usr/share/doc/gcc-10/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-10 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-10-S4I5Pr/gcc-10-10.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-10-S4I5Pr/gcc-10-10.3.0/debian/tmp-gcn/usr,hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-mutex
+Run Build Command(s):/usr/bin/gmake cmTC_aeac3/fast && /usr/bin/gmake -f CMakeFiles/cmTC_aeac3.dir/build.make CMakeFiles/cmTC_aeac3.dir/build
+gmake[1]: Entering directory `/home/su72mej/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_aeac3.dir/CMakeCXXCompilerABI.cpp.o
+/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/bin/g++    -v -o CMakeFiles/cmTC_aeac3.dir/CMakeCXXCompilerABI.cpp.o -c /cluster/tools/cmake/cmake-3.15.3-Linux-x86_64/share/cmake-3.15/Modules/CMakeCXXCompilerABI.cpp
+Reading specs from /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/specs
+COLLECT_GCC=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/bin/g++
+Target: x86_64-pc-linux-gnu
+Configured with: /tmp/root/spack-stage/spack-stage-gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/spack-src/configure --prefix=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s --with-pkgversion='Spack GCC' --with-bugurl=https://github.com/spack/spack/issues --disable-multilib --enable-languages=c,c++,fortran --disable-nls --with-system-zlib --with-zstd=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zstd-1.4.5-ohzan4o4i63w6uzpivle6gf2d63x7glw --with-mpfr-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/include --with-mpfr-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/lib --with-gmp-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/include --with-gmp-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/lib --with-mpc-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/include --with-mpc-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/lib --with-isl-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/include --with-isl-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/lib --with-stage1-ldflags='-Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64 -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zlib-1.2.11-dybtnmj5tsd5kgnlxuhe5ih2vhrtv3sa/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zstd-1.4.5-ohzan4o4i63w6uzpivle6gf2d63x7glw/lib' --with-boot-ldflags='-Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64 -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zlib-1.2.11-dybtnmj5tsd5kgnlxuhe5ih2vhrtv3sa/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zstd-1.4.5-ohzan4o4i63w6uzpivle6gf2d63x7glw/lib -static-libstdc++ -static-libgcc'
 Thread model: posix
 Supported LTO compression algorithms: zlib zstd
-gcc version 10.3.0 (Ubuntu 10.3.0-1ubuntu1~20.04) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_fac20.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/10/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_fac20.dir/CMakeCXXCompilerABI.cpp.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccmbvkCP.s
-GNU C++14 (Ubuntu 10.3.0-1ubuntu1~20.04) version 10.3.0 (x86_64-linux-gnu)
-	compiled by GNU C version 10.3.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+gcc version 10.2.0 (Spack GCC) 
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_aeac3.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/cc1plus -quiet -v -D_GNU_SOURCE /cluster/tools/cmake/cmake-3.15.3-Linux-x86_64/share/cmake-3.15/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_aeac3.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccmmPJzv.s
+GNU C++14 (Spack GCC) version 10.2.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 10.2.0, GMP version 6.1.2, MPFR version 4.0.2-p9, MPC version 1.1.0, isl version isl-0.21-GMP
 
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/10"
-ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
-ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/10/include-fixed"
-ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/10/../../../../x86_64-linux-gnu/include"
+ignoring duplicate directory "/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/include"
+ignoring nonexistent directory "/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../x86_64-pc-linux-gnu/include"
 #include "..." search starts here:
 #include <...> search starts here:
- /usr/include/c++/10
- /usr/include/x86_64-linux-gnu/c++/10
- /usr/include/c++/10/backward
- /usr/lib/gcc/x86_64-linux-gnu/10/include
+ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/include
+ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0
+ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu
+ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward
+ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include
  /usr/local/include
- /usr/include/x86_64-linux-gnu
+ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed
  /usr/include
 End of search list.
-GNU C++14 (Ubuntu 10.3.0-1ubuntu1~20.04) version 10.3.0 (x86_64-linux-gnu)
-	compiled by GNU C version 10.3.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+GNU C++14 (Spack GCC) version 10.2.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 10.2.0, GMP version 6.1.2, MPFR version 4.0.2-p9, MPC version 1.1.0, isl version isl-0.21-GMP
 
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-Compiler executable checksum: 169ee3a1708a329c07eaf03cc8dfbe6c
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_fac20.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- as -v --64 -o CMakeFiles/cmTC_fac20.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccmbvkCP.s
-GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34
-COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/
-LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_fac20.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-Linking CXX executable cmTC_fac20
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fac20.dir/link.txt --verbose=1
-/usr/bin/g++-10      -v CMakeFiles/cmTC_fac20.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_fac20 
-Using built-in specs.
-COLLECT_GCC=/usr/bin/g++-10
-COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/10/lto-wrapper
-OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa:hsa
-OFFLOAD_TARGET_DEFAULT=1
-Target: x86_64-linux-gnu
-Configured with: ../src/configure -v --with-pkgversion='Ubuntu 10.3.0-1ubuntu1~20.04' --with-bugurl=file:///usr/share/doc/gcc-10/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-10 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-10-S4I5Pr/gcc-10-10.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-10-S4I5Pr/gcc-10-10.3.0/debian/tmp-gcn/usr,hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-mutex
+Compiler executable checksum: fe01d2103e09f94cfcb6a09b814e684c
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_aeac3.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ as -v --64 -o CMakeFiles/cmTC_aeac3.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccmmPJzv.s
+GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-34.base.el7
+COMPILER_PATH=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/../lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/../lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_aeac3.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+Linking CXX executable cmTC_aeac3
+/cluster/tools/cmake/cmake-3.15.3-Linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aeac3.dir/link.txt --verbose=1
+/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/bin/g++      -v CMakeFiles/cmTC_aeac3.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_aeac3 
+Reading specs from /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/specs
+COLLECT_GCC=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/bin/g++
+COLLECT_LTO_WRAPPER=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/lto-wrapper
+Target: x86_64-pc-linux-gnu
+Configured with: /tmp/root/spack-stage/spack-stage-gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/spack-src/configure --prefix=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s --with-pkgversion='Spack GCC' --with-bugurl=https://github.com/spack/spack/issues --disable-multilib --enable-languages=c,c++,fortran --disable-nls --with-system-zlib --with-zstd=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zstd-1.4.5-ohzan4o4i63w6uzpivle6gf2d63x7glw --with-mpfr-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/include --with-mpfr-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/lib --with-gmp-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/include --with-gmp-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/lib --with-mpc-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/include --with-mpc-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/lib --with-isl-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/include --with-isl-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/lib --with-stage1-ldflags='-Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64 -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zlib-1.2.11-dybtnmj5tsd5kgnlxuhe5ih2vhrtv3sa/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zstd-1.4.5-ohzan4o4i63w6uzpivle6gf2d63x7glw/lib' --with-boot-ldflags='-Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64 -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zlib-1.2.11-dybtnmj5tsd5kgnlxuhe5ih2vhrtv3sa/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zstd-1.4.5-ohzan4o4i63w6uzpivle6gf2d63x7glw/lib -static-libstdc++ -static-libgcc'
 Thread model: posix
 Supported LTO compression algorithms: zlib zstd
-gcc version 10.3.0 (Ubuntu 10.3.0-1ubuntu1~20.04) 
-COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/
-LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fac20' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/10/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/10/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/10/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKB2D1H.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_fac20 /usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/10/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/10 -L/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/10/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/10/../../.. CMakeFiles/cmTC_fac20.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/10/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fac20' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
-make[1]: Leaving directory '/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp'
+gcc version 10.2.0 (Spack GCC) 
+COMPILER_PATH=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/../lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/../lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_aeac3' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/collect2 -plugin /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/liblto_plugin.so -plugin-opt=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccgr5hTB.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -rpath /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64 --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_aeac3 /lib/../lib64/crt1.o /lib/../lib64/crti.o /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/crtbegin.o -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/../lib64 -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/../lib64 -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0 -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64 -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../.. CMakeFiles/cmTC_aeac3.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/crtend.o /lib/../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_aeac3' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+gmake[1]: Leaving directory `/home/su72mej/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp'
 
 
 
 Parsed CXX implicit include dir info from above output: rv=done
   found start of include info
   found start of implicit include info
-    add: [/usr/include/c++/10]
-    add: [/usr/include/x86_64-linux-gnu/c++/10]
-    add: [/usr/include/c++/10/backward]
-    add: [/usr/lib/gcc/x86_64-linux-gnu/10/include]
+    add: [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/include]
+    add: [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0]
+    add: [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu]
+    add: [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward]
+    add: [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include]
     add: [/usr/local/include]
-    add: [/usr/include/x86_64-linux-gnu]
+    add: [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed]
     add: [/usr/include]
   end of search list found
-  collapse include dir [/usr/include/c++/10] ==> [/usr/include/c++/10]
-  collapse include dir [/usr/include/x86_64-linux-gnu/c++/10] ==> [/usr/include/x86_64-linux-gnu/c++/10]
-  collapse include dir [/usr/include/c++/10/backward] ==> [/usr/include/c++/10/backward]
-  collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/10/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/10/include]
+  collapse include dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/include] ==> [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/include]
+  collapse include dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0] ==> [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/include/c++/10.2.0]
+  collapse include dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu] ==> [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/include/c++/10.2.0/x86_64-pc-linux-gnu]
+  collapse include dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward] ==> [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/include/c++/10.2.0/backward]
+  collapse include dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include] ==> [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include]
   collapse include dir [/usr/local/include] ==> [/usr/local/include]
-  collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+  collapse include dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed] ==> [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed]
   collapse include dir [/usr/include] ==> [/usr/include]
-  implicit include dirs: [/usr/include/c++/10;/usr/include/x86_64-linux-gnu/c++/10;/usr/include/c++/10/backward;/usr/lib/gcc/x86_64-linux-gnu/10/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+  implicit include dirs: [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/include;/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/include/c++/10.2.0;/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/include/c++/10.2.0/x86_64-pc-linux-gnu;/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/include/c++/10.2.0/backward;/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include;/usr/local/include;/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed;/usr/include]
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/su72mej/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/make cmTC_fac20/fast && /usr/bin/make -f CMakeFiles/cmTC_fac20.dir/build.make CMakeFiles/cmTC_fac20.dir/build]
-  ignore line: [make[1]: Entering directory '/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_fac20.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/g++-10    -v -o CMakeFiles/cmTC_fac20.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/usr/bin/g++-10]
-  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa:hsa]
-  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
-  ignore line: [Target: x86_64-linux-gnu]
-  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 10.3.0-1ubuntu1~20.04' --with-bugurl=file:///usr/share/doc/gcc-10/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-10 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-10-S4I5Pr/gcc-10-10.3.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-10-S4I5Pr/gcc-10-10.3.0/debian/tmp-gcn/usr hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-mutex]
+  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_aeac3/fast && /usr/bin/gmake -f CMakeFiles/cmTC_aeac3.dir/build.make CMakeFiles/cmTC_aeac3.dir/build]
+  ignore line: [gmake[1]: Entering directory `/home/su72mej/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_aeac3.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/bin/g++    -v -o CMakeFiles/cmTC_aeac3.dir/CMakeCXXCompilerABI.cpp.o -c /cluster/tools/cmake/cmake-3.15.3-Linux-x86_64/share/cmake-3.15/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Reading specs from /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/specs]
+  ignore line: [COLLECT_GCC=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/bin/g++]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: /tmp/root/spack-stage/spack-stage-gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/spack-src/configure --prefix=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s --with-pkgversion='Spack GCC' --with-bugurl=https://github.com/spack/spack/issues --disable-multilib --enable-languages=c,c++,fortran --disable-nls --with-system-zlib --with-zstd=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zstd-1.4.5-ohzan4o4i63w6uzpivle6gf2d63x7glw --with-mpfr-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/include --with-mpfr-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/lib --with-gmp-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/include --with-gmp-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/lib --with-mpc-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/include --with-mpc-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/lib --with-isl-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/include --with-isl-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/lib --with-stage1-ldflags='-Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64 -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zlib-1.2.11-dybtnmj5tsd5kgnlxuhe5ih2vhrtv3sa/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zstd-1.4.5-ohzan4o4i63w6uzpivle6gf2d63x7glw/lib' --with-boot-ldflags='-Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64 -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zlib-1.2.11-dybtnmj5tsd5kgnlxuhe5ih2vhrtv3sa/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zstd-1.4.5-ohzan4o4i63w6uzpivle6gf2d63x7glw/lib -static-libstdc++ -static-libgcc']
   ignore line: [Thread model: posix]
   ignore line: [Supported LTO compression algorithms: zlib zstd]
-  ignore line: [gcc version 10.3.0 (Ubuntu 10.3.0-1ubuntu1~20.04) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_fac20.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/10/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE /usr/share/cmake-3.16/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_fac20.dir/CMakeCXXCompilerABI.cpp.o -version -fasynchronous-unwind-tables -fstack-protector-strong -Wformat -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccmbvkCP.s]
-  ignore line: [GNU C++14 (Ubuntu 10.3.0-1ubuntu1~20.04) version 10.3.0 (x86_64-linux-gnu)]
-  ignore line: [	compiled by GNU C version 10.3.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.22.1-GMP]
+  ignore line: [gcc version 10.2.0 (Spack GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_aeac3.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/cc1plus -quiet -v -D_GNU_SOURCE /cluster/tools/cmake/cmake-3.15.3-Linux-x86_64/share/cmake-3.15/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpbase CMakeCXXCompilerABI.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_aeac3.dir/CMakeCXXCompilerABI.cpp.o -version -o /tmp/ccmmPJzv.s]
+  ignore line: [GNU C++14 (Spack GCC) version 10.2.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 10.2.0, GMP version 6.1.2, MPFR version 4.0.2-p9, MPC version 1.1.0, isl version isl-0.21-GMP]
   ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/10"]
-  ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
-  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/10/include-fixed"]
-  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/10/../../../../x86_64-linux-gnu/include"]
+  ignore line: [ignoring duplicate directory "/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/include"]
+  ignore line: [ignoring nonexistent directory "/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../x86_64-pc-linux-gnu/include"]
   ignore line: [#include "..." search starts here:]
   ignore line: [#include <...> search starts here:]
-  ignore line: [ /usr/include/c++/10]
-  ignore line: [ /usr/include/x86_64-linux-gnu/c++/10]
-  ignore line: [ /usr/include/c++/10/backward]
-  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/10/include]
+  ignore line: [ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/include]
+  ignore line: [ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0]
+  ignore line: [ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu]
+  ignore line: [ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward]
+  ignore line: [ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include]
   ignore line: [ /usr/local/include]
-  ignore line: [ /usr/include/x86_64-linux-gnu]
+  ignore line: [ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed]
   ignore line: [ /usr/include]
   ignore line: [End of search list.]
-  ignore line: [GNU C++14 (Ubuntu 10.3.0-1ubuntu1~20.04) version 10.3.0 (x86_64-linux-gnu)]
-  ignore line: [	compiled by GNU C version 10.3.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.22.1-GMP]
+  ignore line: [GNU C++14 (Spack GCC) version 10.2.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 10.2.0, GMP version 6.1.2, MPFR version 4.0.2-p9, MPC version 1.1.0, isl version isl-0.21-GMP]
   ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [Compiler executable checksum: 169ee3a1708a329c07eaf03cc8dfbe6c]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_fac20.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  ignore line: [ as -v --64 -o CMakeFiles/cmTC_fac20.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccmbvkCP.s]
-  ignore line: [GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34]
-  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_fac20.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  ignore line: [Linking CXX executable cmTC_fac20]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fac20.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/g++-10      -v CMakeFiles/cmTC_fac20.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_fac20 ]
-  ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/usr/bin/g++-10]
-  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/10/lto-wrapper]
-  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa:hsa]
-  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
-  ignore line: [Target: x86_64-linux-gnu]
-  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 10.3.0-1ubuntu1~20.04' --with-bugurl=file:///usr/share/doc/gcc-10/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-10 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-10-S4I5Pr/gcc-10-10.3.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-10-S4I5Pr/gcc-10-10.3.0/debian/tmp-gcn/usr hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-mutex]
+  ignore line: [Compiler executable checksum: fe01d2103e09f94cfcb6a09b814e684c]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_aeac3.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_aeac3.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccmmPJzv.s]
+  ignore line: [GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-34.base.el7]
+  ignore line: [COMPILER_PATH=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/../lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/../lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_aeac3.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  ignore line: [Linking CXX executable cmTC_aeac3]
+  ignore line: [/cluster/tools/cmake/cmake-3.15.3-Linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aeac3.dir/link.txt --verbose=1]
+  ignore line: [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/bin/g++      -v CMakeFiles/cmTC_aeac3.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_aeac3 ]
+  ignore line: [Reading specs from /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/specs]
+  ignore line: [COLLECT_GCC=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/bin/g++]
+  ignore line: [COLLECT_LTO_WRAPPER=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/lto-wrapper]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: /tmp/root/spack-stage/spack-stage-gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/spack-src/configure --prefix=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s --with-pkgversion='Spack GCC' --with-bugurl=https://github.com/spack/spack/issues --disable-multilib --enable-languages=c,c++,fortran --disable-nls --with-system-zlib --with-zstd=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zstd-1.4.5-ohzan4o4i63w6uzpivle6gf2d63x7glw --with-mpfr-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/include --with-mpfr-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/lib --with-gmp-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/include --with-gmp-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/lib --with-mpc-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/include --with-mpc-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/lib --with-isl-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/include --with-isl-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/lib --with-stage1-ldflags='-Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64 -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zlib-1.2.11-dybtnmj5tsd5kgnlxuhe5ih2vhrtv3sa/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zstd-1.4.5-ohzan4o4i63w6uzpivle6gf2d63x7glw/lib' --with-boot-ldflags='-Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64 -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zlib-1.2.11-dybtnmj5tsd5kgnlxuhe5ih2vhrtv3sa/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zstd-1.4.5-ohzan4o4i63w6uzpivle6gf2d63x7glw/lib -static-libstdc++ -static-libgcc']
   ignore line: [Thread model: posix]
   ignore line: [Supported LTO compression algorithms: zlib zstd]
-  ignore line: [gcc version 10.3.0 (Ubuntu 10.3.0-1ubuntu1~20.04) ]
-  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_fac20' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/10/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/10/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/10/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKB2D1H.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_fac20 /usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/10/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/10 -L/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/10/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/10/../../.. CMakeFiles/cmTC_fac20.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/10/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/crtn.o]
-    arg [/usr/lib/gcc/x86_64-linux-gnu/10/collect2] ==> ignore
+  ignore line: [gcc version 10.2.0 (Spack GCC) ]
+  ignore line: [COMPILER_PATH=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/../lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/../lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_aeac3' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/collect2 -plugin /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/liblto_plugin.so -plugin-opt=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccgr5hTB.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -rpath /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64 --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_aeac3 /lib/../lib64/crt1.o /lib/../lib64/crti.o /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/crtbegin.o -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/../lib64 -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/../lib64 -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0 -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64 -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../.. CMakeFiles/cmTC_aeac3.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/crtend.o /lib/../lib64/crtn.o]
+    arg [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/collect2] ==> ignore
     arg [-plugin] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/10/liblto_plugin.so] ==> ignore
-    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/10/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccKB2D1H.res] ==> ignore
+    arg [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccgr5hTB.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-    arg [--build-id] ==> ignore
+    arg [-rpath] ==> ignore
+    arg [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64] ==> ignore
     arg [--eh-frame-hdr] ==> ignore
     arg [-m] ==> ignore
     arg [elf_x86_64] ==> ignore
-    arg [--hash-style=gnu] ==> ignore
-    arg [--as-needed] ==> ignore
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
-    arg [-pie] ==> ignore
-    arg [-znow] ==> ignore
-    arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_fac20] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/crti.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/10/crtbeginS.o] ==> ignore
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/10] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/10]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/10/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/10/../../../../lib]
-    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
-    arg [-L/lib/../lib] ==> dir [/lib/../lib]
-    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
-    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/10/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/10/../../..]
-    arg [CMakeFiles/cmTC_fac20.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [cmTC_aeac3] ==> ignore
+    arg [/lib/../lib64/crt1.o] ==> ignore
+    arg [/lib/../lib64/crti.o] ==> ignore
+    arg [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/crtbegin.o] ==> ignore
+    arg [-L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/../lib64] ==> dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/../lib64]
+    arg [-L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/../lib64] ==> dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/../lib64]
+    arg [-L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0] ==> dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0]
+    arg [-L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../lib64] ==> dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64] ==> dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64]
+    arg [-L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib] ==> dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib]
+    arg [-L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../..] ==> dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../..]
+    arg [CMakeFiles/cmTC_aeac3.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -223,194 +212,181 @@ Parsed CXX implicit link information from above output:
     arg [-lc] ==> lib [c]
     arg [-lgcc_s] ==> lib [gcc_s]
     arg [-lgcc] ==> lib [gcc]
-    arg [/usr/lib/gcc/x86_64-linux-gnu/10/crtendS.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/crtn.o] ==> ignore
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/10] ==> [/usr/lib/gcc/x86_64-linux-gnu/10]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/10/../../../../lib] ==> [/usr/lib]
-  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
-  collapse library dir [/lib/../lib] ==> [/lib]
-  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
-  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/10/../../..] ==> [/usr/lib]
+    arg [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/crtend.o] ==> ignore
+    arg [/lib/../lib64/crtn.o] ==> ignore
+  collapse library dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/../lib64] ==> [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64]
+  collapse library dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/../lib64] ==> [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64]
+  collapse library dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0] ==> [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0]
+  collapse library dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../lib64] ==> [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64] ==> [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64]
+  collapse library dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib] ==> [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib]
+  collapse library dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../..] ==> [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib]
   implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
-  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/10;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+  implicit dirs: [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64;/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0;/lib64;/usr/lib64;/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib]
   implicit fwks: []
 
 
 Detecting CXX OpenMP compiler ABI info compiled with the following output:
-Change Dir: /home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp
+Change Dir: /home/su72mej/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_2cca6/fast && /usr/bin/make -f CMakeFiles/cmTC_2cca6.dir/build.make CMakeFiles/cmTC_2cca6.dir/build
-make[1]: Entering directory '/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_2cca6.dir/OpenMPTryFlag.cpp.o
-/usr/bin/g++-10    -Wall -Wextra -march=cooperlake -fopenmp -v   -o CMakeFiles/cmTC_2cca6.dir/OpenMPTryFlag.cpp.o -c /home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
-Using built-in specs.
-COLLECT_GCC=/usr/bin/g++-10
-OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa:hsa
-OFFLOAD_TARGET_DEFAULT=1
-Target: x86_64-linux-gnu
-Configured with: ../src/configure -v --with-pkgversion='Ubuntu 10.3.0-1ubuntu1~20.04' --with-bugurl=file:///usr/share/doc/gcc-10/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-10 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-10-S4I5Pr/gcc-10-10.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-10-S4I5Pr/gcc-10-10.3.0/debian/tmp-gcn/usr,hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-mutex
+Run Build Command(s):/usr/bin/gmake cmTC_7586e/fast && /usr/bin/gmake -f CMakeFiles/cmTC_7586e.dir/build.make CMakeFiles/cmTC_7586e.dir/build
+gmake[1]: Entering directory `/home/su72mej/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_7586e.dir/OpenMPTryFlag.cpp.o
+/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/bin/g++    -fopenmp -v   -o CMakeFiles/cmTC_7586e.dir/OpenMPTryFlag.cpp.o -c /home/su72mej/Convergence_bfloat16/src/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp
+Reading specs from /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/specs
+COLLECT_GCC=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/bin/g++
+Target: x86_64-pc-linux-gnu
+Configured with: /tmp/root/spack-stage/spack-stage-gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/spack-src/configure --prefix=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s --with-pkgversion='Spack GCC' --with-bugurl=https://github.com/spack/spack/issues --disable-multilib --enable-languages=c,c++,fortran --disable-nls --with-system-zlib --with-zstd=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zstd-1.4.5-ohzan4o4i63w6uzpivle6gf2d63x7glw --with-mpfr-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/include --with-mpfr-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/lib --with-gmp-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/include --with-gmp-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/lib --with-mpc-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/include --with-mpc-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/lib --with-isl-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/include --with-isl-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/lib --with-stage1-ldflags='-Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64 -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zlib-1.2.11-dybtnmj5tsd5kgnlxuhe5ih2vhrtv3sa/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zstd-1.4.5-ohzan4o4i63w6uzpivle6gf2d63x7glw/lib' --with-boot-ldflags='-Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64 -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zlib-1.2.11-dybtnmj5tsd5kgnlxuhe5ih2vhrtv3sa/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zstd-1.4.5-ohzan4o4i63w6uzpivle6gf2d63x7glw/lib -static-libstdc++ -static-libgcc'
 Thread model: posix
 Supported LTO compression algorithms: zlib zstd
-gcc version 10.3.0 (Ubuntu 10.3.0-1ubuntu1~20.04) 
-COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-march=cooperlake' '-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_2cca6.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-pthread'
- /usr/lib/gcc/x86_64-linux-gnu/10/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE -D_REENTRANT /home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp -quiet -dumpbase OpenMPTryFlag.cpp -march=cooperlake -auxbase-strip CMakeFiles/cmTC_2cca6.dir/OpenMPTryFlag.cpp.o -Wall -Wextra -version -fopenmp -fasynchronous-unwind-tables -fstack-protector-strong -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccjT30UV.s
-GNU C++14 (Ubuntu 10.3.0-1ubuntu1~20.04) version 10.3.0 (x86_64-linux-gnu)
-	compiled by GNU C version 10.3.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+gcc version 10.2.0 (Spack GCC) 
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_7586e.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread'
+ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/cc1plus -quiet -v -D_GNU_SOURCE -D_REENTRANT /home/su72mej/Convergence_bfloat16/src/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp -quiet -dumpbase OpenMPTryFlag.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_7586e.dir/OpenMPTryFlag.cpp.o -version -fopenmp -o /tmp/ccxzpG4o.s
+GNU C++14 (Spack GCC) version 10.2.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 10.2.0, GMP version 6.1.2, MPFR version 4.0.2-p9, MPC version 1.1.0, isl version isl-0.21-GMP
 
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/10"
-ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
-ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/10/include-fixed"
-ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/10/../../../../x86_64-linux-gnu/include"
+ignoring duplicate directory "/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/include"
+ignoring nonexistent directory "/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../x86_64-pc-linux-gnu/include"
 #include "..." search starts here:
 #include <...> search starts here:
- /usr/include/c++/10
- /usr/include/x86_64-linux-gnu/c++/10
- /usr/include/c++/10/backward
- /usr/lib/gcc/x86_64-linux-gnu/10/include
+ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/include
+ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0
+ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu
+ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward
+ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include
  /usr/local/include
- /usr/include/x86_64-linux-gnu
+ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed
  /usr/include
 End of search list.
-GNU C++14 (Ubuntu 10.3.0-1ubuntu1~20.04) version 10.3.0 (x86_64-linux-gnu)
-	compiled by GNU C version 10.3.0, GMP version 6.2.0, MPFR version 4.0.2, MPC version 1.1.0, isl version isl-0.22.1-GMP
+GNU C++14 (Spack GCC) version 10.2.0 (x86_64-pc-linux-gnu)
+	compiled by GNU C version 10.2.0, GMP version 6.1.2, MPFR version 4.0.2-p9, MPC version 1.1.0, isl version isl-0.21-GMP
 
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
-Compiler executable checksum: 169ee3a1708a329c07eaf03cc8dfbe6c
-COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-march=cooperlake' '-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_2cca6.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-pthread'
- as -v --64 -o CMakeFiles/cmTC_2cca6.dir/OpenMPTryFlag.cpp.o /tmp/ccjT30UV.s
-GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34
-COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/
-LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-march=cooperlake' '-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_2cca6.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-pthread'
-Linking CXX executable cmTC_2cca6
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2cca6.dir/link.txt --verbose=1
-/usr/bin/g++-10  -Wall -Wextra -march=cooperlake -fopenmp -v    CMakeFiles/cmTC_2cca6.dir/OpenMPTryFlag.cpp.o  -o cmTC_2cca6  -v 
-Using built-in specs.
-COLLECT_GCC=/usr/bin/g++-10
-COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/10/lto-wrapper
-OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa:hsa
-OFFLOAD_TARGET_DEFAULT=1
-Target: x86_64-linux-gnu
-Configured with: ../src/configure -v --with-pkgversion='Ubuntu 10.3.0-1ubuntu1~20.04' --with-bugurl=file:///usr/share/doc/gcc-10/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++,m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-10 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-10-S4I5Pr/gcc-10-10.3.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/gcc-10-S4I5Pr/gcc-10-10.3.0/debian/tmp-gcn/usr,hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-mutex
+Compiler executable checksum: fe01d2103e09f94cfcb6a09b814e684c
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_7586e.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread'
+ as -v --64 -o CMakeFiles/cmTC_7586e.dir/OpenMPTryFlag.cpp.o /tmp/ccxzpG4o.s
+GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-34.base.el7
+COMPILER_PATH=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/../lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/../lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_7586e.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread'
+Linking CXX executable cmTC_7586e
+/cluster/tools/cmake/cmake-3.15.3-Linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7586e.dir/link.txt --verbose=1
+/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/bin/g++   -fopenmp -v    CMakeFiles/cmTC_7586e.dir/OpenMPTryFlag.cpp.o  -o cmTC_7586e -v 
+Reading specs from /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/specs
+COLLECT_GCC=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/bin/g++
+COLLECT_LTO_WRAPPER=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/lto-wrapper
+Target: x86_64-pc-linux-gnu
+Configured with: /tmp/root/spack-stage/spack-stage-gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/spack-src/configure --prefix=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s --with-pkgversion='Spack GCC' --with-bugurl=https://github.com/spack/spack/issues --disable-multilib --enable-languages=c,c++,fortran --disable-nls --with-system-zlib --with-zstd=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zstd-1.4.5-ohzan4o4i63w6uzpivle6gf2d63x7glw --with-mpfr-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/include --with-mpfr-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/lib --with-gmp-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/include --with-gmp-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/lib --with-mpc-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/include --with-mpc-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/lib --with-isl-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/include --with-isl-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/lib --with-stage1-ldflags='-Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64 -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zlib-1.2.11-dybtnmj5tsd5kgnlxuhe5ih2vhrtv3sa/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zstd-1.4.5-ohzan4o4i63w6uzpivle6gf2d63x7glw/lib' --with-boot-ldflags='-Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64 -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zlib-1.2.11-dybtnmj5tsd5kgnlxuhe5ih2vhrtv3sa/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zstd-1.4.5-ohzan4o4i63w6uzpivle6gf2d63x7glw/lib -static-libstdc++ -static-libgcc'
 Thread model: posix
 Supported LTO compression algorithms: zlib zstd
-gcc version 10.3.0 (Ubuntu 10.3.0-1ubuntu1~20.04) 
-COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/
-LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../:/lib/:/usr/lib/
-Reading specs from /usr/lib/gcc/x86_64-linux-gnu/10/libgomp.spec
-COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-march=cooperlake' '-fopenmp' '-v' '-o' 'cmTC_2cca6' '-v' '-shared-libgcc' '-pthread'
- /usr/lib/gcc/x86_64-linux-gnu/10/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/10/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/10/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUjSNpn.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_2cca6 /usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/10/crtbeginS.o /usr/lib/gcc/x86_64-linux-gnu/10/crtoffloadbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/10 -L/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/10/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/10/../../.. CMakeFiles/cmTC_2cca6.dir/OpenMPTryFlag.cpp.o -lstdc++ -lm -lgomp -lgcc_s -lgcc -lpthread -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/10/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/crtn.o /usr/lib/gcc/x86_64-linux-gnu/10/crtoffloadend.o
-COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-march=cooperlake' '-fopenmp' '-v' '-o' 'cmTC_2cca6' '-v' '-shared-libgcc' '-pthread'
-make[1]: Leaving directory '/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp'
+gcc version 10.2.0 (Spack GCC) 
+COMPILER_PATH=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/
+LIBRARY_PATH=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/../lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/../lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../:/lib/:/usr/lib/
+Reading specs from /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/../lib64/libgomp.spec
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_7586e' '-v' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread'
+ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/collect2 -plugin /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/liblto_plugin.so -plugin-opt=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cciEulVi.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -rpath /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64 --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_7586e /lib/../lib64/crt1.o /lib/../lib64/crti.o /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/crtbegin.o -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/../lib64 -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/../lib64 -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0 -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64 -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../.. CMakeFiles/cmTC_7586e.dir/OpenMPTryFlag.cpp.o -lstdc++ -lm -lgomp -lgcc_s -lgcc -lpthread -lc -lgcc_s -lgcc /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/crtend.o /lib/../lib64/crtn.o
+COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_7586e' '-v' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread'
+gmake[1]: Leaving directory `/home/su72mej/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp'
 
 
 
 Parsed CXX OpenMP implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /home/su72mej/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):/usr/bin/make cmTC_2cca6/fast && /usr/bin/make -f CMakeFiles/cmTC_2cca6.dir/build.make CMakeFiles/cmTC_2cca6.dir/build]
-  ignore line: [make[1]: Entering directory '/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_2cca6.dir/OpenMPTryFlag.cpp.o]
-  ignore line: [/usr/bin/g++-10    -Wall -Wextra -march=cooperlake -fopenmp -v   -o CMakeFiles/cmTC_2cca6.dir/OpenMPTryFlag.cpp.o -c /home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp]
-  ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/usr/bin/g++-10]
-  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa:hsa]
-  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
-  ignore line: [Target: x86_64-linux-gnu]
-  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 10.3.0-1ubuntu1~20.04' --with-bugurl=file:///usr/share/doc/gcc-10/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-10 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-10-S4I5Pr/gcc-10-10.3.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-10-S4I5Pr/gcc-10-10.3.0/debian/tmp-gcn/usr hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-mutex]
+  ignore line: [Run Build Command(s):/usr/bin/gmake cmTC_7586e/fast && /usr/bin/gmake -f CMakeFiles/cmTC_7586e.dir/build.make CMakeFiles/cmTC_7586e.dir/build]
+  ignore line: [gmake[1]: Entering directory `/home/su72mej/Convergence_bfloat16/src/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_7586e.dir/OpenMPTryFlag.cpp.o]
+  ignore line: [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/bin/g++    -fopenmp -v   -o CMakeFiles/cmTC_7586e.dir/OpenMPTryFlag.cpp.o -c /home/su72mej/Convergence_bfloat16/src/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp]
+  ignore line: [Reading specs from /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/specs]
+  ignore line: [COLLECT_GCC=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/bin/g++]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: /tmp/root/spack-stage/spack-stage-gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/spack-src/configure --prefix=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s --with-pkgversion='Spack GCC' --with-bugurl=https://github.com/spack/spack/issues --disable-multilib --enable-languages=c,c++,fortran --disable-nls --with-system-zlib --with-zstd=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zstd-1.4.5-ohzan4o4i63w6uzpivle6gf2d63x7glw --with-mpfr-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/include --with-mpfr-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/lib --with-gmp-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/include --with-gmp-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/lib --with-mpc-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/include --with-mpc-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/lib --with-isl-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/include --with-isl-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/lib --with-stage1-ldflags='-Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64 -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zlib-1.2.11-dybtnmj5tsd5kgnlxuhe5ih2vhrtv3sa/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zstd-1.4.5-ohzan4o4i63w6uzpivle6gf2d63x7glw/lib' --with-boot-ldflags='-Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64 -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zlib-1.2.11-dybtnmj5tsd5kgnlxuhe5ih2vhrtv3sa/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zstd-1.4.5-ohzan4o4i63w6uzpivle6gf2d63x7glw/lib -static-libstdc++ -static-libgcc']
   ignore line: [Thread model: posix]
   ignore line: [Supported LTO compression algorithms: zlib zstd]
-  ignore line: [gcc version 10.3.0 (Ubuntu 10.3.0-1ubuntu1~20.04) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-march=cooperlake' '-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_2cca6.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-pthread']
-  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/10/cc1plus -quiet -v -imultiarch x86_64-linux-gnu -D_GNU_SOURCE -D_REENTRANT /home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp -quiet -dumpbase OpenMPTryFlag.cpp -march=cooperlake -auxbase-strip CMakeFiles/cmTC_2cca6.dir/OpenMPTryFlag.cpp.o -Wall -Wextra -version -fopenmp -fasynchronous-unwind-tables -fstack-protector-strong -Wformat-security -fstack-clash-protection -fcf-protection -o /tmp/ccjT30UV.s]
-  ignore line: [GNU C++14 (Ubuntu 10.3.0-1ubuntu1~20.04) version 10.3.0 (x86_64-linux-gnu)]
-  ignore line: [	compiled by GNU C version 10.3.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.22.1-GMP]
+  ignore line: [gcc version 10.2.0 (Spack GCC) ]
+  ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_7586e.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread']
+  ignore line: [ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/cc1plus -quiet -v -D_GNU_SOURCE -D_REENTRANT /home/su72mej/Convergence_bfloat16/src/build/CMakeFiles/FindOpenMP/OpenMPTryFlag.cpp -quiet -dumpbase OpenMPTryFlag.cpp -mtune=generic -march=x86-64 -auxbase-strip CMakeFiles/cmTC_7586e.dir/OpenMPTryFlag.cpp.o -version -fopenmp -o /tmp/ccxzpG4o.s]
+  ignore line: [GNU C++14 (Spack GCC) version 10.2.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 10.2.0, GMP version 6.1.2, MPFR version 4.0.2-p9, MPC version 1.1.0, isl version isl-0.21-GMP]
   ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [ignoring duplicate directory "/usr/include/x86_64-linux-gnu/c++/10"]
-  ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
-  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/10/include-fixed"]
-  ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/10/../../../../x86_64-linux-gnu/include"]
+  ignore line: [ignoring duplicate directory "/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/include"]
+  ignore line: [ignoring nonexistent directory "/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../x86_64-pc-linux-gnu/include"]
   ignore line: [#include "..." search starts here:]
   ignore line: [#include <...> search starts here:]
-  ignore line: [ /usr/include/c++/10]
-  ignore line: [ /usr/include/x86_64-linux-gnu/c++/10]
-  ignore line: [ /usr/include/c++/10/backward]
-  ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/10/include]
+  ignore line: [ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/include]
+  ignore line: [ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0]
+  ignore line: [ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/x86_64-pc-linux-gnu]
+  ignore line: [ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../include/c++/10.2.0/backward]
+  ignore line: [ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include]
   ignore line: [ /usr/local/include]
-  ignore line: [ /usr/include/x86_64-linux-gnu]
+  ignore line: [ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/include-fixed]
   ignore line: [ /usr/include]
   ignore line: [End of search list.]
-  ignore line: [GNU C++14 (Ubuntu 10.3.0-1ubuntu1~20.04) version 10.3.0 (x86_64-linux-gnu)]
-  ignore line: [	compiled by GNU C version 10.3.0  GMP version 6.2.0  MPFR version 4.0.2  MPC version 1.1.0  isl version isl-0.22.1-GMP]
+  ignore line: [GNU C++14 (Spack GCC) version 10.2.0 (x86_64-pc-linux-gnu)]
+  ignore line: [	compiled by GNU C version 10.2.0, GMP version 6.1.2, MPFR version 4.0.2-p9, MPC version 1.1.0, isl version isl-0.21-GMP]
   ignore line: []
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
-  ignore line: [Compiler executable checksum: 169ee3a1708a329c07eaf03cc8dfbe6c]
-  ignore line: [COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-march=cooperlake' '-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_2cca6.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-pthread']
-  ignore line: [ as -v --64 -o CMakeFiles/cmTC_2cca6.dir/OpenMPTryFlag.cpp.o /tmp/ccjT30UV.s]
-  ignore line: [GNU assembler version 2.34 (x86_64-linux-gnu) using BFD version (GNU Binutils for Ubuntu) 2.34]
-  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-march=cooperlake' '-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_2cca6.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-pthread']
-  ignore line: [Linking CXX executable cmTC_2cca6]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2cca6.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/g++-10  -Wall -Wextra -march=cooperlake -fopenmp -v    CMakeFiles/cmTC_2cca6.dir/OpenMPTryFlag.cpp.o  -o cmTC_2cca6  -v ]
-  ignore line: [Using built-in specs.]
-  ignore line: [COLLECT_GCC=/usr/bin/g++-10]
-  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/10/lto-wrapper]
-  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa:hsa]
-  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
-  ignore line: [Target: x86_64-linux-gnu]
-  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 10.3.0-1ubuntu1~20.04' --with-bugurl=file:///usr/share/doc/gcc-10/README.Bugs --enable-languages=c ada c++ go brig d fortran objc obj-c++ m2 --prefix=/usr --with-gcc-major-version-only --program-suffix=-10 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/gcc-10-S4I5Pr/gcc-10-10.3.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/gcc-10-S4I5Pr/gcc-10-10.3.0/debian/tmp-gcn/usr hsa --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-mutex]
+  ignore line: [Compiler executable checksum: fe01d2103e09f94cfcb6a09b814e684c]
+  ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_7586e.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread']
+  ignore line: [ as -v --64 -o CMakeFiles/cmTC_7586e.dir/OpenMPTryFlag.cpp.o /tmp/ccxzpG4o.s]
+  ignore line: [GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-34.base.el7]
+  ignore line: [COMPILER_PATH=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/../lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/../lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'CMakeFiles/cmTC_7586e.dir/OpenMPTryFlag.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread']
+  ignore line: [Linking CXX executable cmTC_7586e]
+  ignore line: [/cluster/tools/cmake/cmake-3.15.3-Linux-x86_64/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7586e.dir/link.txt --verbose=1]
+  ignore line: [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/bin/g++   -fopenmp -v    CMakeFiles/cmTC_7586e.dir/OpenMPTryFlag.cpp.o  -o cmTC_7586e -v ]
+  ignore line: [Reading specs from /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/specs]
+  ignore line: [COLLECT_GCC=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/bin/g++]
+  ignore line: [COLLECT_LTO_WRAPPER=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/lto-wrapper]
+  ignore line: [Target: x86_64-pc-linux-gnu]
+  ignore line: [Configured with: /tmp/root/spack-stage/spack-stage-gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/spack-src/configure --prefix=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s --with-pkgversion='Spack GCC' --with-bugurl=https://github.com/spack/spack/issues --disable-multilib --enable-languages=c,c++,fortran --disable-nls --with-system-zlib --with-zstd=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zstd-1.4.5-ohzan4o4i63w6uzpivle6gf2d63x7glw --with-mpfr-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/include --with-mpfr-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/lib --with-gmp-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/include --with-gmp-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/lib --with-mpc-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/include --with-mpc-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/lib --with-isl-include=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/include --with-isl-lib=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/lib --with-stage1-ldflags='-Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64 -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zlib-1.2.11-dybtnmj5tsd5kgnlxuhe5ih2vhrtv3sa/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zstd-1.4.5-ohzan4o4i63w6uzpivle6gf2d63x7glw/lib' --with-boot-ldflags='-Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64 -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gmp-6.1.2-jw3suqgcpeyrqb6ckr7fqf4l4izsqkpg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpfr-4.0.2-uhvq4hrttn5tb5sa3ohssyavc7i27zzg/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/mpc-1.1.0-nqowf2zvbdx5qxc4ooys22f45o2cbxqc/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/isl-0.21-54h7r2wf374a44wux66eqy5bpavueovo/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zlib-1.2.11-dybtnmj5tsd5kgnlxuhe5ih2vhrtv3sa/lib -Wl,-rpath,/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/zstd-1.4.5-ohzan4o4i63w6uzpivle6gf2d63x7glw/lib -static-libstdc++ -static-libgcc']
   ignore line: [Thread model: posix]
   ignore line: [Supported LTO compression algorithms: zlib zstd]
-  ignore line: [gcc version 10.3.0 (Ubuntu 10.3.0-1ubuntu1~20.04) ]
-  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/10/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/10/../../../:/lib/:/usr/lib/]
-  ignore line: [Reading specs from /usr/lib/gcc/x86_64-linux-gnu/10/libgomp.spec]
-  ignore line: [COLLECT_GCC_OPTIONS='-Wall' '-Wextra' '-march=cooperlake' '-fopenmp' '-v' '-o' 'cmTC_2cca6' '-v' '-shared-libgcc' '-pthread']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/10/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/10/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/10/lto-wrapper -plugin-opt=-fresolution=/tmp/ccUjSNpn.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_2cca6 /usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/10/crtbeginS.o /usr/lib/gcc/x86_64-linux-gnu/10/crtoffloadbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/10 -L/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/10/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/10/../../.. CMakeFiles/cmTC_2cca6.dir/OpenMPTryFlag.cpp.o -lstdc++ -lm -lgomp -lgcc_s -lgcc -lpthread -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/10/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/crtn.o /usr/lib/gcc/x86_64-linux-gnu/10/crtoffloadend.o]
-    arg [/usr/lib/gcc/x86_64-linux-gnu/10/collect2] ==> ignore
+  ignore line: [gcc version 10.2.0 (Spack GCC) ]
+  ignore line: [COMPILER_PATH=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/../lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/../lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../:/lib/:/usr/lib/]
+  ignore line: [Reading specs from /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/../lib64/libgomp.spec]
+  ignore line: [COLLECT_GCC_OPTIONS='-fopenmp' '-v' '-o' 'cmTC_7586e' '-v' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-pthread']
+  link line: [ /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/collect2 -plugin /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/liblto_plugin.so -plugin-opt=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cciEulVi.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -rpath /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64 --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_7586e /lib/../lib64/crt1.o /lib/../lib64/crti.o /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/crtbegin.o -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/../lib64 -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/../lib64 -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0 -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64 -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib -L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../.. CMakeFiles/cmTC_7586e.dir/OpenMPTryFlag.cpp.o -lstdc++ -lm -lgomp -lgcc_s -lgcc -lpthread -lc -lgcc_s -lgcc /cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/crtend.o /lib/../lib64/crtn.o]
+    arg [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/collect2] ==> ignore
     arg [-plugin] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/10/liblto_plugin.so] ==> ignore
-    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/10/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccUjSNpn.res] ==> ignore
+    arg [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/libexec/gcc/x86_64-pc-linux-gnu/10.2.0/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cciEulVi.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lpthread] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
-    arg [--build-id] ==> ignore
+    arg [-rpath] ==> ignore
+    arg [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib:/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64] ==> ignore
     arg [--eh-frame-hdr] ==> ignore
     arg [-m] ==> ignore
     arg [elf_x86_64] ==> ignore
-    arg [--hash-style=gnu] ==> ignore
-    arg [--as-needed] ==> ignore
     arg [-dynamic-linker] ==> ignore
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
-    arg [-pie] ==> ignore
-    arg [-znow] ==> ignore
-    arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_2cca6] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/crti.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/10/crtbeginS.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/10/crtoffloadbegin.o] ==> ignore
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/10] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/10]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/10/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/10/../../../../lib]
-    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
-    arg [-L/lib/../lib] ==> dir [/lib/../lib]
-    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
-    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/10/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/10/../../..]
-    arg [CMakeFiles/cmTC_2cca6.dir/OpenMPTryFlag.cpp.o] ==> ignore
+    arg [cmTC_7586e] ==> ignore
+    arg [/lib/../lib64/crt1.o] ==> ignore
+    arg [/lib/../lib64/crti.o] ==> ignore
+    arg [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/crtbegin.o] ==> ignore
+    arg [-L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/../lib64] ==> dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/../lib64]
+    arg [-L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/../lib64] ==> dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/../lib64]
+    arg [-L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0] ==> dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0]
+    arg [-L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../lib64] ==> dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64] ==> dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64]
+    arg [-L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib] ==> dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib]
+    arg [-L/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../..] ==> dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../..]
+    arg [CMakeFiles/cmTC_7586e.dir/OpenMPTryFlag.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgomp] ==> lib [gomp]
@@ -420,19 +396,19 @@ Parsed CXX OpenMP implicit link information from above output:
     arg [-lc] ==> lib [c]
     arg [-lgcc_s] ==> lib [gcc_s]
     arg [-lgcc] ==> lib [gcc]
-    arg [/usr/lib/gcc/x86_64-linux-gnu/10/crtendS.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu/crtn.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/10/crtoffloadend.o] ==> ignore
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/10] ==> [/usr/lib/gcc/x86_64-linux-gnu/10]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/10/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/10/../../../../lib] ==> [/usr/lib]
-  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
-  collapse library dir [/lib/../lib] ==> [/lib]
-  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
-  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
-  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/10/../../..] ==> [/usr/lib]
+    arg [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/crtend.o] ==> ignore
+    arg [/lib/../lib64/crtn.o] ==> ignore
+  collapse library dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64/../lib64] ==> [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64]
+  collapse library dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/../lib64] ==> [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64]
+  collapse library dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0] ==> [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0]
+  collapse library dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../../../lib64] ==> [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64] ==> [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64]
+  collapse library dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib] ==> [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib]
+  collapse library dir [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0/../../..] ==> [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib]
   implicit libs: [stdc++;m;gomp;gcc_s;gcc;pthread;c;gcc_s;gcc]
-  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/10;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+  implicit dirs: [/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib64;/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib/gcc/x86_64-pc-linux-gnu/10.2.0;/lib64;/usr/lib64;/cluster/spack/opt/spack/linux-centos7-broadwell/gcc-8.1.0/gcc-10.2.0-ru4xdhhkxnma5i727b7njtnjoh6kff3s/lib]
   implicit fwks: []
 
 

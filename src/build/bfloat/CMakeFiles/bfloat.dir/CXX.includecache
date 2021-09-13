@@ -6,13 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/bfloat/bfloat.cpp
+/home/su72mej/Convergence_bfloat16/src/bfloat/bfloat.cpp
 bfloat.hpp
-/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/bfloat/bfloat.hpp
+/home/su72mej/Convergence_bfloat16/src/bfloat/bfloat.hpp
 
-/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/bfloat/bfloat.hpp
-immintrin.h
--
+/home/su72mej/Convergence_bfloat16/src/bfloat/bfloat.hpp
 bitset
 -
 cstring
