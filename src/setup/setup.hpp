@@ -90,20 +90,23 @@ class Setup {
       }
     }
   };
-
-  // using 128 bit registers since we don't rely on performance rather tahn just
-  // want to check out if our results are valid
-  template <typename T>
-  void gemm_bfloat_intrinsics(std::vector<T> &io_c, int i) {
-    for (size_t l_mi = 0; l_mi < l_m; l_mi++) {
-      for (size_t l_ni = 0; l_ni < l_n; l_ni++) {
-        for (size_t l_ki = 0; l_ki < l_k; l_ki++) {
-          __m128 a = _mm_load_ps(l_a.at(l_mi + l_ki * l_lda));
-          __m128 b = _mm_load_ps(l_b.at(l_ki + l_ni * l_ldb));
+  /*
+    // using 128 bit registers since we don't rely on performance rather tahn
+    just
+    // want to check out if our results are valid
+    template <typename T>
+    void gemm_bfloat_intrinsics(std::vector<T> &io_c, int i) {
+      for (size_t l_mi = 0; l_mi < l_m; l_mi++) {
+        for (size_t l_ni = 0; l_ni < l_n; l_ni++) {
+          for (size_t l_ki = 0; l_ki < l_k; l_ki++) {
+            __m128 a = _mm_load_ps(l_a.at(l_mi + l_ki * l_lda));
+            __m128 b = _mm_load_ps(l_b.at(l_ki + l_ni * l_ldb));
+          }
         }
       }
     }
-  }
+
+    */
 };
 
 #endif /* end of include guard: _SETUP_HPP_ */

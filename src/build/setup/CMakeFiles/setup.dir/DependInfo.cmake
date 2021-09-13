@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/su72mej/Convergence_bfloat16/src/setup/setup.cpp" "/home/su72mej/Convergence_bfloat16/src/build/setup/CMakeFiles/setup.dir/setup.cpp.o"
+  "/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/setup/setup.cpp" "/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/build/setup/CMakeFiles/setup.dir/setup.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -16,7 +16,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/su72mej/Convergence_bfloat16/src/build/bfloat/CMakeFiles/bfloat.dir/DependInfo.cmake"
+  "/home/jolles/Documents/MasterDataScience/Masterarbeit/Convergence_bfloat16/src/build/bfloat/CMakeFiles/bfloat.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
