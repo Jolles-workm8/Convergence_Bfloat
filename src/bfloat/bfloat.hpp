@@ -9,6 +9,7 @@
 #include <vector>
 
 float float_to_bfloat(float i_fp32);
+float float_to_bfloat_round(float i_fp32);
 float float_to_bfloat_intr(float i_fp32);
 
 std::vector<float> float_to_3xbfloat_vector(float i_a);
