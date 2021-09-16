@@ -11,7 +11,7 @@
 
 TEST_CASE("Float to BFloat", "[number]") {
   float a;
-  float b_trunc, b_round, b_int;
+  float b_round, b_int;
 
   std::cout.precision(17);
 
@@ -25,7 +25,6 @@ TEST_CASE("Float to BFloat", "[number]") {
     for (size_t i = 0; i < 10000; i++) {
       a = (float)gen();
 
-      b_trunc = float_to_bfloat_trunc(a);
       b_round = float_to_bfloat_round(a);
       b_int = float_to_bfloat_intr(a);
 
@@ -42,7 +41,6 @@ TEST_CASE("Float to BFloat", "[number]") {
 
     for (size_t i = 0; i < 10000; i++) {
       a = gen();
-      b_trunc = float_to_bfloat_trunc(a);
       b_round = float_to_bfloat_round(a);
       b_int = float_to_bfloat_intr(a);
 
@@ -54,7 +52,6 @@ TEST_CASE("Float to BFloat", "[number]") {
     a = 0;
     b_int = float_to_bfloat_intr(a);
     b_round = float_to_bfloat_round(a);
-    b_trunc = float_to_bfloat_trunc(a);
 
     REQUIRE(b_round == b_int);
 
@@ -79,17 +76,15 @@ TEST_CASE("Float to BFloat", "[number]") {
 }
 TEST_CASE("Float to Bfloat Vector", "[vector]") {
   float a;
-  float b_intr, b_round;
   std::vector<float> v_intr(3);
   std::vector<float> v_round(3);
+
   SECTION("Testing random numbers", "numbers") {
     std::random_device rnd_device;
     std::mt19937 mersenne_engine{rnd_device()};
     std::uniform_real_distribution<float> dist{-10000, 1000};
 
     auto gen = [&dist, &mersenne_engine]() { return dist(mersenne_engine); };
-
-    uint32_t b_as_int;
 
     for (size_t i = 0; i < 10000; i++) {
       a = gen();
