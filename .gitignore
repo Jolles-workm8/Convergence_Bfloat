@@ -33,4 +33,4 @@
 
 # User specified excludes
 *.csv
-/build/
+src/build/
