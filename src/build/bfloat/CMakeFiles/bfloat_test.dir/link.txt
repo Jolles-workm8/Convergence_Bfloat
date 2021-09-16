@@ -1,0 +1,1 @@
+/usr/bin/g++-10  -Wall -Wextra -march=cooperlake   CMakeFiles/bfloat_test.dir/bfloat.test.cpp.o  -o bfloat_test  ../submodules/Catch2/src/libCatch2Main.a libbfloat.a ../submodules/Catch2/src/libCatch2.a 
