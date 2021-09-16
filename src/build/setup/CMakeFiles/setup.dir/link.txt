@@ -1,2 +1,0 @@
-/usr/bin/ar qc libsetup.a  CMakeFiles/setup.dir/setup.cpp.o
-/usr/bin/ranlib libsetup.a
