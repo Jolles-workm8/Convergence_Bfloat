@@ -1,6 +1,6 @@
 #include "bfloat.hpp"
 
-float float_to_bfloat(float i_fp32) {
+float float_to_bfloat_trunc(float i_fp32) {
   // transpose the FP32 to BF16 virtually by cutting the mantissa.
 
   uint32_t float_as_int;
@@ -8,53 +8,57 @@ float float_to_bfloat(float i_fp32) {
 
   std::memcpy(&float_as_int, &i_fp32, sizeof(float));
 
-  std::bitset<32> l_bf_bit{float_as_int};
+  std::bitset<32> l_a{float_as_int};
+  std::bitset<32> l_b = 0xffff0000;
 
-  for (size_t i = 0; i < 16; i++) {
-    l_bf_bit.reset(i);
-  }
+  l_a = l_a & l_b;
 
-  float_as_int = l_bf_bit.to_ulong();
+  float_as_int = l_a.to_ulong();
 
   std::memcpy(&o_bf16, &float_as_int, sizeof(float));
 
   return o_bf16;
 }
+
 float float_to_bfloat_round(float i_fp32) {
-  // TODO: Locate the upper and lower bfloat to the fp_32 input. Round up/down
-  // to earest neighbour. Rounding down is like above, so implement switch case
-  // to evaluate first and then set bits.
 
-  // i_fp32 *= 1.001957f;
-
+  float o_bf16, o_bf16n;
+  bool negative = false;
   uint32_t float_as_int;
-  float o_bf16;
 
   std::memcpy(&float_as_int, &i_fp32, sizeof(float));
 
-  std::bitset<32> l_bf_bit{float_as_int};
-  std::bitset<32> l_bf_bit_next;
+  std::bitset<32> l_a{float_as_int};
+  std::bitset<32> l_b = 0xffff0000;
 
-  // substract the last 16 bits, so first 8 bits of mantissa are left.
+  l_a = l_a & l_b;
+  l_b = l_a;
 
-  for (size_t i = 0; i < 16; i++) {
-    l_bf_bit.reset(i);
-  }
-
-  l_bf_bit_next = l_bf_bit;
-
-  for (size_t i = 16; i < 31; i++) {
-    l_bf_bit_next.flip(i);
-    if (l_bf_bit_next.test(i)) {
+  for (size_t i = 16; i < 32; i++) {
+    if (l_a.test(i)) {
+      l_b.reset(i);
+    } else {
+      l_b.set(i);
       break;
     }
   }
 
-  float_as_int = l_bf_bit.to_ulong();
-
+  float_as_int = l_a.to_ulong();
   std::memcpy(&o_bf16, &float_as_int, sizeof(float));
 
-  return o_bf16;
+  float_as_int = l_b.to_ulong();
+  std::memcpy(&o_bf16n, &float_as_int, sizeof(float));
+  if (std::abs(i_fp32 - o_bf16n) < std::abs(i_fp32 - o_bf16)) {
+    return o_bf16n;
+  } else if (std ::abs(i_fp32 - o_bf16n) > std::abs(i_fp32 - o_bf16)) {
+    return o_bf16;
+  } else if (std::abs(i_fp32 - o_bf16n) == std::abs(i_fp32 - o_bf16)) {
+    if (l_a.test(16)) {
+      return o_bf16n;
+    } else {
+      return o_bf16;
+    }
+  }
 }
 
 float float_to_bfloat_intr(float i_fp32) {
@@ -92,15 +96,15 @@ std::vector<float> float_to_3xbfloat_vector(float i_fp32) {
   std::vector<float> bfloat = {0.0f, 0.0f, 0.0f};
 
   // compute first bfloat
-  bfloat[0] = float_to_bfloat(i_fp32);
+  bfloat[0] = float_to_bfloat_round(i_fp32);
 
   // compute second bfloat
   float intermediate = i_fp32 - bfloat[0];
-  bfloat[1] = float_to_bfloat(intermediate);
+  bfloat[1] = float_to_bfloat_round(intermediate);
 
   // compute third bfloat
   intermediate -= bfloat[1];
-  bfloat[2] = float_to_bfloat(intermediate);
+  bfloat[2] = float_to_bfloat_round(intermediate);
   /*
     std::cout << "floating point value:" << '\t' << i_a << '\n';
 
@@ -114,8 +118,26 @@ std::vector<float> float_to_3xbfloat_vector(float i_fp32) {
 }
 
 std::vector<float> float_to_3xbfloat_vector_intr(float i_fp32) {
-  std::vector<float> v;
+  std::vector<float> bfloat = {0.0f, 0.0f, 0.0f};
 
-  v.push_back(i_fp32);
-  return v;
+  // compute first bfloat
+  bfloat[0] = float_to_bfloat_intr(i_fp32);
+
+  // compute second bfloat
+  float intermediate = i_fp32 - bfloat[0];
+  bfloat[1] = float_to_bfloat_intr(intermediate);
+
+  // compute third bfloat
+  intermediate -= bfloat[1];
+  bfloat[2] = float_to_bfloat_intr(intermediate);
+  /*
+    std::cout << "floating point value:" << '\t' << i_a << '\n';
+
+    std::cout << "bfloat_vector = { ";
+    for (float n : bfloat) {
+      std::cout << n << ", ";
+    }
+    std::cout << "}; \n";
+  */
+  return bfloat;
 };

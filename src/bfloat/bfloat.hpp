@@ -6,9 +6,10 @@
 #include <bitset>
 #include <cstring>
 #include <iostream>
+#include <ostream>
 #include <vector>
 
-float float_to_bfloat(float i_fp32);
+float float_to_bfloat_trunc(float i_fp32);
 float float_to_bfloat_round(float i_fp32);
 float float_to_bfloat_intr(float i_fp32);
 

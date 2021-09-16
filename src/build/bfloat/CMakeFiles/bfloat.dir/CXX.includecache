@@ -19,6 +19,8 @@ cstring
 -
 iostream
 -
+ostream
+-
 vector
 -
 
