@@ -4,6 +4,7 @@
 #include <immintrin.h>
 
 #include <bitset>
+#include <cmath>
 #include <cstring>
 #include <iostream>
 #include <ostream>
