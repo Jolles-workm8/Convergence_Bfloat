@@ -18,7 +18,7 @@ TEST_CASE("Float to BFloat", "[number]") {
   SECTION("Testing integer numbers", "int") {
     std::random_device rnd_device;
     std::mt19937 mersenne_engine{rnd_device()};
-    std::uniform_int_distribution<int> dist{10000, 10000};
+    std::uniform_int_distribution<int> dist{-10000, 10000};
 
     auto gen = [&dist, &mersenne_engine]() { return dist(mersenne_engine); };
 
@@ -41,6 +41,7 @@ TEST_CASE("Float to BFloat", "[number]") {
 
     for (size_t i = 0; i < 10000; i++) {
       a = gen();
+
       b_round = float_to_bfloat_round(a);
       b_int = float_to_bfloat_intr(a);
 
