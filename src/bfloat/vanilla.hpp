@@ -42,3 +42,4 @@ void gemm_bfloat(float const *i_a, float const *i_b, float *io_c,
     }
   }
 };
+#endif
