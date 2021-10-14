@@ -12,6 +12,8 @@
 #include <vector>
 
 #include "bfloat.hpp"
+#include "vanilla.hpp"
+#include "xsmm.hpp"
 
 class Setup {
  private:
