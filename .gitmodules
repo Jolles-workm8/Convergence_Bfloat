@@ -1,3 +1,6 @@
 [submodule "src/submodules/Catch2"]
 	path = src/submodules/Catch2
 	url = https://github.com/catchorg/Catch2
+[submodule "src/submodules/libxsmm"]
+	path = src/submodules/libxsmm
+	url = git@github.com:hfp/libxsmm.git
