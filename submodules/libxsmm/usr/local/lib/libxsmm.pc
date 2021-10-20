@@ -1,0 +1,11 @@
+Name: libxsmm
+Description: Matrix operations and deep learning primitives
+URL: https://github.com/hfp/libxsmm
+Version: 1.16.2
+
+prefix=usr/local
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Cflags: -I${includedir}
+Libs: -L${libdir} -lxsmm -lpthread -lrt -ldl -lm -lc

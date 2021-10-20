@@ -1,0 +1,12 @@
+Name: libxsmm/ext
+Description: LIBXSMM/multithreaded for OpenMP
+URL: https://github.com/hfp/libxsmm
+Version: 1.16.2
+
+prefix=usr/local
+includedir=${prefix}/include
+libdir=${prefix}/lib
+
+Requires: libxsmm
+Cflags: -I${includedir}
+Libs: -L${libdir} -lxsmmext -fopenmp

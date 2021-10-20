@@ -2,12 +2,14 @@
 # The extension is already found. Any number of sources could be listed here.
 add_library(setup setup.cpp)
 
+#include_directories(../kernel)
+
 find_package(OpenMP)
 
 if(OpenMP_CXX_FOUND)
-  target_link_libraries(setup LINK_PUBLIC bfloat OpenMP::OpenMP_CXX)
+  target_link_libraries(setup LINK_PUBLIC vanilla MMxsmm OpenMP::OpenMP_CXX)
 else()
-  target_link_libraries(setup LINK_PUBLIC bfloat)
+  target_link_libraries(setup LINK_PUBLIC vanilla MMxsmm)
 endif()
 
 
