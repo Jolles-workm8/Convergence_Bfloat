@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.16.3)
 project(bfloat16_fp32_convergence LANGUAGES CXX)
 
 set(CMAKE_CXX_COMPILER /usr/bin/g++-10)
-set(CMAKE_CXX_FLAGS "-Wall -Wextra -march=cooperlake")
+set(CMAKE_CXX_FLAGS "-Wall -Wextra -march=cooperlake -fno-stack-protector")
 
 
 
@@ -18,4 +18,6 @@ add_subdirectory(${SUBMODULES_PATH}/Catch2)
 
 add_subdirectory(src)
 add_subdirectory(test)
+
+enable_testing()
 

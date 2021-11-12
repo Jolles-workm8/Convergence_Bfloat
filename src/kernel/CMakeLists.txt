@@ -23,17 +23,6 @@ endif()
 
 target_link_libraries(MMxsmm xsmm m pthread dl c lapack blas lapack)
 
-add_executable(bfloat.test bfloat.test.cpp)
-add_executable(MMxsmm.test MMxsmm.test.cpp)
-add_executable(vanilla.test vanilla.test.cpp)
-
-
-
-target_link_libraries(bfloat.test LINK_PUBLIC Catch2::Catch2WithMain bfloat)
-target_link_libraries(vanilla.test LINK_PUBLIC Catch2::Catch2WithMain bfloat vanilla)
-target_link_libraries(MMxsmm.test LINK_PUBLIC Catch2::Catch2WithMain MMxsmm vanilla)
-
-
 # Make sure the compiler can find include files for our libraries 
 # when other libraries or executables link to them
 target_include_directories(bfloat PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

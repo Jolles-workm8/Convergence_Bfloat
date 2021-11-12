@@ -70,6 +70,6 @@ void Setup::GEMM() {
 }
 
 void Setup::XSMM() {
-  MMxsmm_vanilla(l_a.data(), l_b.data(), l_c_ref_fp32.data(), l_m, l_n, l_k,
-                 l_lda, l_ldb, l_ldc);
+  MMxsmm_svanilla(l_a.data(), l_b.data(), l_c_ref_fp32.data(), l_m, l_n, l_k,
+                  l_lda, l_ldb, l_ldc);
 }

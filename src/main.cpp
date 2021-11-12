@@ -66,6 +66,7 @@ int main() {
       std::cout << "*" << std::flush;
     }
     scalar->GEMM();
+    scalar->XSMM();
   }
 
   std::cout << '\n';
@@ -105,6 +106,7 @@ int main() {
         std::cout << "*" << std::flush;
       }
       vector->GEMM();
+      vector->XSMM();
     }
 
     std::cout << '\n';
@@ -145,6 +147,7 @@ int main() {
         std::cout << "*" << std::flush;
       }
       matrix->GEMM();
+      matrix->XSMM();
     }
 
     std::cout << '\n';

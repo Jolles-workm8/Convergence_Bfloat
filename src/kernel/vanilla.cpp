@@ -3,12 +3,12 @@
 void gemms_ref(float const *i_a, float const *i_b, float *io_c,
                unsigned int i_m, unsigned int i_n, unsigned int i_k,
                unsigned int i_lda, unsigned int i_ldb, unsigned int i_ldc) {
-#pragma omp parallel for
-  for (unsigned int l_m = 0; l_m < i_m; l_m++) {
+  //#pragma omp parallel for
+
+  for (unsigned int l_k = 0; l_k < i_k; l_k++) {
     for (unsigned int l_n = 0; l_n < i_n; l_n++) {
-      for (unsigned int l_k = 0; l_k < i_k; l_k++) {
-        io_c[l_m + l_n * i_ldc] +=
-            (i_a[l_m + l_k * i_lda]) * (i_b[l_k + l_n * i_ldb]);
+      for (unsigned int l_m = 0; l_m < i_m; l_m++) {
+        io_c[l_m + l_n * i_m] += i_a[l_m + l_k * i_m] * i_b[l_k + l_n * i_k];
       }
     }
   }
@@ -17,12 +17,12 @@ void gemms_ref(float const *i_a, float const *i_b, float *io_c,
 void gemmd_ref(float const *i_a, float const *i_b, double *io_c,
                unsigned int i_m, unsigned int i_n, unsigned int i_k,
                unsigned int i_lda, unsigned int i_ldb, unsigned int i_ldc) {
-#pragma omp parallel for
+  //#pragma omp parallel for
   for (unsigned int l_m = 0; l_m < i_m; l_m++) {
     for (unsigned int l_n = 0; l_n < i_n; l_n++) {
       for (unsigned int l_k = 0; l_k < i_k; l_k++) {
-        io_c[l_m + l_n * i_ldc] += static_cast<double>(i_a[l_m + l_k * i_lda]) *
-                                   static_cast<double>(i_b[l_k + l_n * i_ldb]);
+        io_c[l_m + l_n * i_m] += static_cast<double>(i_a[l_m + l_k * i_m]) *
+                                 static_cast<double>(i_b[l_k + l_n * i_k]);
       }
     }
   }
@@ -38,13 +38,13 @@ void gemm_bfloat(float const *i_a, float const *i_b, float *io_c,
       for (size_t l_k = 0; l_k < i_k; l_k++) {
         float result = 0;
         std::vector<float> l_abf =
-            float_to_3xbfloat_vector(i_a[l_m + l_k * i_lda]);
+            float_to_3xbfloat_vector(i_a[l_m + l_k * i_m]);
         std::vector<float> l_bbf =
-            float_to_3xbfloat_vector(i_b[l_k + l_n * i_ldb]);
+            float_to_3xbfloat_vector(i_b[l_k + l_n * i_k]);
         multiplication_bfloat(l_abf, l_bbf, i_operations, result);
 
 #pragma omp critical
-        io_c[l_m + l_n * i_ldc] += result;
+        io_c[l_m + l_n * i_m] += result;
       }
     }
   }
