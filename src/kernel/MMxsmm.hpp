@@ -17,16 +17,31 @@ void MMxsmm_bfloat(float const *i_a, float const *i_b, float *io_c,
                    unsigned int i_m, unsigned int i_n, unsigned int i_k,
                    unsigned int i_lda, unsigned int i_ldb, unsigned int i_ldc);
 
-void gen_bf_matrices(const float *src, libxsmm_bfloat16 *bf_0,
+void gen_bf_matrices(float const *src, libxsmm_bfloat16 *bf_0,
                      libxsmm_bfloat16 *bf_1, libxsmm_bfloat16 *bf_2,
                      unsigned int size);
 
-template <std::size_t K, std::size_t M>
-void vnni_swap(libxsmm_bfloat16 src[K][M], libxsmm_bfloat16 dest[K / 2][M][2]) {
-  for (size_t i = 0; i < K; i += 2) {
-    for (size_t j = 0; j < M; j++) {
-      dest[i / 2][j][0] = src[i][j];
-      dest[i / 2][j][1] = src[i + 1][j];
+template <std::size_t K, std::size_t M, typename T>
+void vnni_swap(T *src, T *dest) {
+  /*
+  for (size_t l_k = 0; l_k < K - (K % 2); l_k += 2) {
+    for (size_t l_m = 0; l_m < M; l_m++) {
+      dest[l_k / 2][l_m][0] = src[l_k][l_m];
+      dest[l_k / 2][l_m][1] = src[l_k + 1][l_m];
+    }
+  }
+  */
+
+  for (size_t l_k = 0; l_k < K; l_k += 2) {
+    for (size_t l_m = 0; l_m < M; l_m++) {
+      dest[2 * l_m + l_k * M] = src[l_m + l_k * M];
+      dest[2 * l_m + l_k * M + 1] = src[l_m + (l_k + 1) * M];
+    }
+  }
+
+  if (K % 2) {
+    for (size_t l_m = 0; l_m < M; l_m++) {
+      dest[l_m + (K - 1) * M] = src[l_m + (K - 1) * M];
     }
   }
 };
