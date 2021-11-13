@@ -141,9 +141,7 @@ TEST_CASE("GeMM with libxsmm", "[libxsmm]") {
     gemmd_ref(a.data(), b.data(), c_dref.data(), m, n, k, lda, ldb, ldc);
     gemm_bfloat(a.data(), b.data(), c_bf.data(), m, n, k, lda, ldb, ldc, 6);
     MMxsmm_svanilla(a.data(), b.data(), c_xsmm.data(), m, n, k, lda, ldb, ldc);
-    // MMxsmm_bfloat(a_vnni.data(), b.data(), c_xsmm_bf.data(), m, n, k, lda,
-    // ldb,
-    //              ldc);
+    MMxsmm_bfloat(a.data(), b.data(), c_xsmm_bf.data(), m, n, k, lda, ldb, ldc);
 
     for (size_t i = 0; i < c_ref.size(); i++) {
       std::cout << "i = " << '\t' << i << '\t' << "c_double" << '\t'
