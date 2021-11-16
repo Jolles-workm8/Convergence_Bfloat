@@ -21,8 +21,8 @@ void gen_bf_matrices(float const *src, libxsmm_bfloat16 *bf_0,
                      libxsmm_bfloat16 *bf_1, libxsmm_bfloat16 *bf_2,
                      unsigned int size);
 
-template <std::size_t K, std::size_t M, typename T>
-void vnni_swap(T *src, T *dest) {
+template <typename T>
+void vnni_swap(T *src, T *dest, size_t K, size_t M) {
   /*
   for (size_t l_k = 0; l_k < K - (K % 2); l_k += 2) {
     for (size_t l_m = 0; l_m < M; l_m++) {

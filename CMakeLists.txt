@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.16.3)
 project(bfloat16_fp32_convergence LANGUAGES CXX)
 
 set(CMAKE_CXX_COMPILER /usr/bin/g++-10)
-set(CMAKE_CXX_FLAGS "-Wall -Wextra -march=cooperlake -fno-stack-protector")
+set(CMAKE_CXX_FLAGS "-Wall -Wparentheses -Wextra -march=cooperlake -fno-stack-protector -fopenmp")
 
 
 
