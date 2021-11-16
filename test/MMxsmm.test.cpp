@@ -68,7 +68,7 @@ TEST_CASE("GeMM with libxsmm", "[small]") {
     float c_ref[9] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
 
     float a_swapped[9] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
-    MMxsmm_bfloat(a, b, c_bf, 3, 3, 3, 3, 3, 3);
+    //  MMxsmm_bfloat(a, b, c_bf, 3, 3, 3, 3, 3, 3);
     MMxsmm_svanilla(a, b, c_ref, 3, 3, 3, 3, 3, 3);
     for (size_t i = 0; i < 3; i++) {
       for (size_t j = 0; j < 3; j++) {
@@ -104,15 +104,15 @@ TEST_CASE("GeMM with libxsmm", "[small]") {
     // First create an instance of an engine.
     std::random_device rnd_device;
     // Specify the engine and distribution.
-    std::mt19937 mersenne_engine{rnd_device()};  // Generates random floats
+    std::mt19937 mersenne_engine{rnd_device()}; // Generates random floats
     std::uniform_real_distribution<float> dist{1, 100};
 
     auto gen = [&dist, &mersenne_engine]() { return dist(mersenne_engine); };
 
     generate(a.begin(), a.end(), gen);
 
-    MMxsmm_bfloat(a.data(), b, c, 3, 3, 3, 3, 3, 3);
-    MMxsmm_svanilla(a.data(), b, c_ref, 3, 3, 3, 3, 3, 3);
+    // MMxsmm_bfloat(a.data(), b, c, 3, 3, 3, 3, 3, 3);
+    // MMxsmm_svanilla(a.data(), b, c_ref, 3, 3, 3, 3, 3, 3);
 
     for (size_t i = 0; i < 9; i++) {
       CHECK(c[i] == a[i]);
@@ -123,13 +123,18 @@ TEST_CASE("GeMM with libxsmm", "[small]") {
 TEST_CASE("Big GeMM with libxsmm", "[big]") {
   std::cout.precision(17);
 
-  int m, n, k, lda, ldb, ldb;
+  int m, n, k, lda, ldb, ldc;
   int count = 10;
+  for (n = 1; n < count; n++) {
+    for (k = 1; k < count; k++) {
+      for (m = 1; m < count; m++) {
+        SECTION("n = " + std::to_string(n) + ", m = " + std::to_string(m) +
+                ", k = " + std::to_string(k)) {
 
-  SECTION() {
-    for (n = 0; n < count; n++) {
-      for (k = 0; k < count; k++) {
-        for (m = 0; m < count; m++) {
+          lda = m;
+          ldb = k;
+          ldc = m;
+
           std::vector<float> a(m * k, 1);
           std::vector<float> a_vnni(m * k, 1);
           std::vector<float> b(k * n, 1);
@@ -138,8 +143,6 @@ TEST_CASE("Big GeMM with libxsmm", "[big]") {
           std::vector<float> c_bf(m * n, 0);
           std::vector<float> c_xsmm(m * n, 0);
           std::vector<float> c_xsmm_bf(m * n, 0);
-
-          string name = {(char)m, (char)n, (char)k};
 
           gemms_ref(a.data(), b.data(), c_ref.data(), m, n, k, lda, ldb, ldc);
 
@@ -181,7 +184,6 @@ TEST_CASE("Big GeMM with libxsmm", "[big]") {
   ldc);
 
     for (size_t i = 0; i < c_ref.size(); i++) {
-      /*
       std::cout << "i = " << '\t' << i << '\t' << "c_double" << '\t'
                 << c_dref[i] << std::endl;
       std::cout << "i = " << '\t' << i << '\t' << "c_reference" << '\t'
