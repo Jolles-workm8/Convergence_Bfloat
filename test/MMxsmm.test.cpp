@@ -14,7 +14,9 @@
 
 #include "vanilla.hpp"
 
-TEST_CASE("VNNI SWAP", "[vnni]") {
+TEST_CASE("VNNI") {}
+
+TEST_CASE("VNNI SWAP", "[vnni], [swap]") {
   SECTION("even m, even k") {
     const size_t k = 4;
     const size_t m = 4;
@@ -104,7 +106,7 @@ TEST_CASE("Big int GeMM with libxsmm", "[big][int]") {
   int count = 10;
 
   for (n = 1; n < count; n++) {
-    for (k = 2; k < count; k *= 2) {
+    for (k = 2; k < count; k += 2) {
       for (m = 1; m < count; m++) {
         SECTION("n = " + std::to_string(n) + ", m = " + std::to_string(m) +
                 ", k = " + std::to_string(k)) {
@@ -153,7 +155,7 @@ TEST_CASE("Big real GeMM with libxsmm", "[big][real]") {
   std::uniform_real_distribution<float> dist{0, 100};
 
   for (n = 1; n < count; n++) {
-    for (k = 2; k < count; k *= 2) {
+    for (k = 2; k < count; k += 2) {
       for (m = 1; m < count; m++) {
         SECTION("n = " + std::to_string(n) + ", m = " + std::to_string(m) +
                 ", k = " + std::to_string(k)) {
