@@ -40,9 +40,8 @@ void vnni_swap(T *src, T *dest, size_t K, size_t M) {
   }
 
   if (K % 2) {
-    for (size_t l_m = 0; l_m < M; l_m++) {
-      dest[l_m + (K - 1) * M] = src[l_m + (K - 1) * M];
-    }
+    std::cerr << "Error: can't convert matrices with uneven k to vnni-format"
+              << std::endl;
   }
 };
 #endif

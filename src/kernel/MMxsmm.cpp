@@ -33,10 +33,6 @@ void MMxsmm_svanilla(float const *i_a, float const *i_b, float *io_c,
 void MMxsmm_bfloat(float const *i_a, float const *i_b, float *io_c,
                    unsigned int i_m, unsigned int i_n, unsigned int i_k,
                    unsigned int i_lda, unsigned int i_ldb, unsigned int i_ldc) {
-  // const int flags = 16384;
-  int flags = LIBXSMM_GEMM_FLAGS('N', 'N');
-  // LIBXSMM_GEMM_FLAG_NONE;
-  // LIBXSMM_GEMM_FLAG_VNNI_A;
   const float alpha = 1;
   const float beta = 1;
 
@@ -52,7 +48,9 @@ void MMxsmm_bfloat(float const *i_a, float const *i_b, float *io_c,
   // add description
   libxsmm_descriptor_blob l_xgemmBlob;
   const libxsmm_gemm_descriptor *l_desc = 0;
-  const int l_flags = LIBXSMM_GEMM_FLAGS('N', 'N');
+  int l_flags = LIBXSMM_GEMM_FLAGS('N', 'N');
+
+  l_flags |= LIBXSMM_GEMM_FLAG_VNNI_A;
   // LIBXSMM_GEMM_VNNI_FLAGS('N', 'N', 'Y', 'N');
   l_desc = libxsmm_gemm_descriptor_dinit2(
       &l_xgemmBlob, LIBXSMM_GEMM_PRECISION_BF16, LIBXSMM_GEMM_PRECISION_F32,
@@ -60,7 +58,7 @@ void MMxsmm_bfloat(float const *i_a, float const *i_b, float *io_c,
 
   libxsmm_bsmmfunction kernel = libxsmm_xmmdispatch(l_desc).bsmm;
 
-  assert(kernel);
+  // assert(kernel);
 
   gen_bf_matrices(i_a, l_a0, l_a1, l_a2, i_m * i_k);
   gen_bf_matrices(i_b, l_b0, l_b1, l_b2, i_k * i_n);
