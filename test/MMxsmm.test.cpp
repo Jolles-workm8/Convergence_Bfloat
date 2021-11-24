@@ -70,13 +70,11 @@ TEST_CASE("VNNI SWAP", "[vnni], [swap]") {
 
 TEST_CASE("Small int GeMM with libxsmm", "[small][int]") {
   float a[4] = {0, 1, 2, 3};
-  float a_v[4] = {0, 0, 0, 0};
   float b[4] = {1, 1, 1, 1};
   float c_bf[4] = {0, 0, 0, 0};
   float c_ref[4] = {0, 0, 0, 0};
 
-  vnni_swap(a, a_v, 2, 2);
-  MMxsmm_bfloat(a_v, b, c_bf, 2, 2, 2, 2, 2, 2);
+  MMxsmm_bfloat(a, b, c_bf, 2, 2, 2, 2, 2, 2);
   MMxsmm_svanilla(a, b, c_ref, 2, 2, 2, 2, 2, 2);
 
   for (size_t i = 0; i < 3; i++) {
@@ -85,14 +83,12 @@ TEST_CASE("Small int GeMM with libxsmm", "[small][int]") {
 }
 TEST_CASE("Small real GeMM with libxsmm", "[small][real]") {
   float a[4] = {0.5, 1.5, 2.5, 3.5};
-  float a_v[4] = {0, 0, 0, 0};
   float b[4] = {1, 1, 1, 1};
   float c_bf[4] = {0, 0, 0, 0};
   float c_van[4] = {0, 0, 0, 0};
   float c_ref[4] = {3, 5, 3, 5};
 
-  vnni_swap(a, a_v, 2, 2);
-  MMxsmm_bfloat(a_v, b, c_bf, 2, 2, 2, 2, 2, 2);
+  MMxsmm_bfloat(a, b, c_bf, 2, 2, 2, 2, 2, 2);
   MMxsmm_svanilla(a, b, c_van, 2, 2, 2, 2, 2, 2);
   for (size_t i = 0; i < 4; i++) {
     CHECK(c_ref[i] == c_van[i]);
@@ -103,10 +99,10 @@ TEST_CASE("Big int GeMM with libxsmm", "[big][int]") {
   std::cout.precision(17);
 
   int m, n, k, lda, ldb, ldc;
-  int count = 10;
+  int count = 32;
 
   for (n = 1; n < count; n++) {
-    for (k = 2; k < count; k += 2) {
+    for (k = 2; k < count; k++) {
       for (m = 1; m < count; m++) {
         SECTION("n = " + std::to_string(n) + ", m = " + std::to_string(m) +
                 ", k = " + std::to_string(k)) {
@@ -115,7 +111,6 @@ TEST_CASE("Big int GeMM with libxsmm", "[big][int]") {
           ldc = m;
 
           std::vector<float> a(m * k, 0);
-          std::vector<float> a_v(m * k, 0);
           std::vector<float> b(k * n, 0);
           std::vector<float> c_ref(m * n, 0);
           // std::vector<double> c_dref(m * n, 0);
@@ -125,15 +120,14 @@ TEST_CASE("Big int GeMM with libxsmm", "[big][int]") {
 
           std::iota(a.begin(), a.end(), 1);
           std::iota(b.begin(), b.end(), 1);
-          vnni_swap(a.data(), a_v.data(), k, m);
 
           gemms_ref(a.data(), b.data(), c_ref.data(), m, n, k, lda, ldb, ldc);
 
           MMxsmm_svanilla(a.data(), b.data(), c_xsmm.data(), m, n, k, lda, ldb,
                           ldc);
 
-          MMxsmm_bfloat(a_v.data(), b.data(), c_xsmm_bf.data(), m, n, k, lda,
-                        ldb, ldc);
+          MMxsmm_bfloat(a.data(), b.data(), c_xsmm_bf.data(), m, n, k, lda, ldb,
+                        ldc);
 
           for (size_t i = 0; i < c_ref.size(); i++) {
             CHECK(c_ref[i] == c_xsmm[i]);
@@ -147,7 +141,7 @@ TEST_CASE("Big int GeMM with libxsmm", "[big][int]") {
 
 TEST_CASE("Big real GeMM with libxsmm", "[big][real]") {
   int m, n, k, lda, ldb, ldc;
-  int count = 12;
+  int count = 32;
   // First create an instance of an engine.
   std::random_device rnd_device;
   // Specify the engine and distribution.
@@ -155,7 +149,7 @@ TEST_CASE("Big real GeMM with libxsmm", "[big][real]") {
   std::uniform_real_distribution<float> dist{0, 100};
 
   for (n = 1; n < count; n++) {
-    for (k = 2; k < count; k += 2) {
+    for (k = 2; k < count; k++) {
       for (m = 1; m < count; m++) {
         SECTION("n = " + std::to_string(n) + ", m = " + std::to_string(m) +
                 ", k = " + std::to_string(k)) {
@@ -179,15 +173,13 @@ TEST_CASE("Big real GeMM with libxsmm", "[big][real]") {
           generate(a.begin(), a.end(), gen);
           generate(b.begin(), b.end(), gen);
 
-          vnni_swap(a.data(), a_v.data(), k, m);
-
           gemms_ref(a.data(), b.data(), c_ref.data(), m, n, k, lda, ldb, ldc);
 
           MMxsmm_svanilla(a.data(), b.data(), c_xsmm.data(), m, n, k, lda, ldb,
                           ldc);
 
-          MMxsmm_bfloat(a_v.data(), b.data(), c_xsmm_bf.data(), m, n, k, lda,
-                        ldb, ldc);
+          MMxsmm_bfloat(a.data(), b.data(), c_xsmm_bf.data(), m, n, k, lda, ldb,
+                        ldc);
 
           for (size_t i = 0; i < c_ref.size(); i++) {
             CHECK(c_ref[i] == Catch::Approx(c_xsmm[i]).epsilon(0.1));

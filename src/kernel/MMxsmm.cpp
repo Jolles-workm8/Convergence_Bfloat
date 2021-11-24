@@ -4,8 +4,7 @@ void MMxsmm_svanilla(float const *i_a, float const *i_b, float *io_c,
                      unsigned int i_m, unsigned int i_n, unsigned int i_k,
                      unsigned int i_lda, unsigned int i_ldb,
                      unsigned int i_ldc) {
-  int flags = LIBXSMM_GEMM_FLAGS('N', 'N');  //
-                                             // LIBXSMM_GEMM_FLAG_NONE;
+  int flags = LIBXSMM_GEMM_FLAGS('N', 'N');
   const float alpha = 1;
   const float beta = 1;
   /*
@@ -30,13 +29,36 @@ void MMxsmm_svanilla(float const *i_a, float const *i_b, float *io_c,
   kernel(i_a, i_b, io_c);
 }
 
-void MMxsmm_bfloat(float *i_a, float *i_b, float *io_c, unsigned int i_m,
-                   unsigned int i_n, unsigned int i_k, unsigned int i_lda,
-                   unsigned int i_ldb, unsigned int i_ldc) {
+void MMxsmm_bfloat(float const *i_a, float const *i_b, float *io_c,
+                   unsigned int i_m, unsigned int i_n, unsigned int i_k,
+                   unsigned int i_lda, unsigned int i_ldb, unsigned int i_ldc) {
   const float alpha = 1;
   const float beta = 1;
 
-  vnni(i_a, i_b, i_m, i_n, i_k);
+  std::vector<float> l_a;
+  std::vector<float> temp_a;
+  std::vector<float> l_b;
+
+  if (i_k % 2 == 1) {
+    l_a.resize((i_k + 1) * i_m, 0);
+    temp_a.resize((i_k + 1) * i_m, 0);
+    l_b.resize((i_k + 1) * i_n, 0);
+    std::memcpy(temp_a.data(), i_a, i_k * i_m * sizeof(float));
+    vnni_swap(temp_a.data(), l_a.data(), i_k + 1, i_m);
+    for (size_t l_n = 0; l_n < i_n; l_n++) {
+      for (size_t l_k = 0; l_k < i_k; l_k++) {
+        l_b[l_k + l_n * (i_k + 1)] = i_b[l_k + l_n * i_k];
+      }
+    }
+    i_k++;
+  } else {
+    l_a.resize(i_k * i_m, 0);
+    temp_a.resize(i_k * i_m, 0);
+    l_b.resize(i_k * i_n, 0);
+    std::memcpy(temp_a.data(), i_a, i_k * i_m * sizeof(float));
+    vnni_swap(temp_a.data(), l_a.data(), i_k, i_m);
+    std::memcpy(l_b.data(), i_b, i_k * i_n * sizeof(float));
+  }
 
   libxsmm_bfloat16 l_a0[i_m * i_k];
   libxsmm_bfloat16 l_a1[i_m * i_k];
@@ -50,9 +72,8 @@ void MMxsmm_bfloat(float *i_a, float *i_b, float *io_c, unsigned int i_m,
   // add description
   libxsmm_descriptor_blob l_xgemmBlob;
   const libxsmm_gemm_descriptor *l_desc = 0;
-  int l_flags = LIBXSMM_GEMM_FLAGS('N', 'N');
+  int l_flags = LIBXSMM_GEMM_FLAGS('N', 'N') | LIBXSMM_GEMM_FLAG_VNNI_A;
 
-  l_flags |= LIBXSMM_GEMM_FLAG_VNNI_A;
   l_desc = libxsmm_gemm_descriptor_dinit2(
       &l_xgemmBlob, LIBXSMM_GEMM_PRECISION_BF16, LIBXSMM_GEMM_PRECISION_F32,
       i_m, i_n, i_k, i_lda, i_ldb, i_ldc, alpha, beta, l_flags, i_prefetch);
@@ -61,8 +82,8 @@ void MMxsmm_bfloat(float *i_a, float *i_b, float *io_c, unsigned int i_m,
 
   // assert(kernel);
 
-  gen_bf_matrices(i_a, l_a0, l_a1, l_a2, i_m * i_k);
-  gen_bf_matrices(i_b, l_b0, l_b1, l_b2, i_n * i_k);
+  gen_bf_matrices(l_a.data(), l_a0, l_a1, l_a2, i_m * i_k);
+  gen_bf_matrices(l_b.data(), l_b0, l_b1, l_b2, i_n * i_k);
 
   kernel(l_a0, l_b0, io_c);
   kernel(l_a0, l_b1, io_c);
@@ -98,31 +119,6 @@ void gen_bf_matrices(float *src, libxsmm_bfloat16 *bf_0, libxsmm_bfloat16 *bf_1,
   libxsmm_rne_convert_fp32_bf16(intermediate.data(), bf_2, size);
 }
 
-void vnni(float *a, float *b, unsigned int i_m, unsigned int i_n,
-          unsigned int i_k) {
-  if (i_k % 2) {
-    float a_v[i_m * (i_k + 1)];
-    float b_v[i_n * (i_k + 1)];
-    vnni_swap(a, a_v, i_k, i_m);
-    for (size_t l_n; l_n < i_n; l_n++) {
-      for (size_t l_k; l_k < i_k; l_k++) {
-        b_v[l_k + l_n * i_k] = b[l_k + l_n * i_k];
-      }
-    }
-    for (size_t l_n; l_n < i_n; l_n++) {
-      b_v[l_n * (i_k + 1)] = 0;
-    }
-    swap_pointer(a_v, a);
-    swap_pointer(b_v, b);
-    i_k++;
-
-  } else {
-    float a_v[i_m * i_k];
-    vnni_swap(a, a_v, i_k, i_m);
-    swap_pointer(a_v, a);
-  }
-}
-
 void vnni_swap(float *src, float *dest, size_t K, size_t M) {
   /*
   for (size_t l_k = 0; l_k < K - (K % 2); l_k += 2) {
@@ -146,10 +142,4 @@ void vnni_swap(float *src, float *dest, size_t K, size_t M) {
       dest[2 * l_m + (K - 1) * M + 1] = 0;
     }
   }
-}
-
-void swap_pointer(float *i_a, float *i_b) {
-  float *temp = i_a;
-  i_a = i_b;
-  i_b = temp;
 }
