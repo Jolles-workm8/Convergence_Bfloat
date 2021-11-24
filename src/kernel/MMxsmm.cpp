@@ -41,24 +41,25 @@ void MMxsmm_bfloat(float const *i_a, float const *i_b, float *io_c,
 
   if (i_k % 2 == 1) {
     l_a.resize((i_k + 1) * i_m, 0);
-    temp_a.resize((i_k + 1) * i_m, 0);
     l_b.resize((i_k + 1) * i_n, 0);
-    std::memcpy(temp_a.data(), i_a, i_k * i_m * sizeof(float));
-    vnni_swap(temp_a.data(), l_a.data(), i_k + 1, i_m);
+
+    vnni_swap(i_a, l_a.data(), i_k, i_m);
     for (size_t l_n = 0; l_n < i_n; l_n++) {
       for (size_t l_k = 0; l_k < i_k; l_k++) {
         l_b[l_k + l_n * (i_k + 1)] = i_b[l_k + l_n * i_k];
       }
     }
     i_k++;
+    i_ldb++;
   } else {
     l_a.resize(i_k * i_m, 0);
-    temp_a.resize(i_k * i_m, 0);
     l_b.resize(i_k * i_n, 0);
-    std::memcpy(temp_a.data(), i_a, i_k * i_m * sizeof(float));
-    vnni_swap(temp_a.data(), l_a.data(), i_k, i_m);
+
+    vnni_swap(i_a, l_a.data(), i_k, i_m);
     std::memcpy(l_b.data(), i_b, i_k * i_n * sizeof(float));
   }
+
+  std::cout << i_k << std::endl;
 
   libxsmm_bfloat16 l_a0[i_m * i_k];
   libxsmm_bfloat16 l_a1[i_m * i_k];
@@ -117,29 +118,4 @@ void gen_bf_matrices(float *src, libxsmm_bfloat16 *bf_0, libxsmm_bfloat16 *bf_1,
     intermediate[i] -= copy[i];
   }
   libxsmm_rne_convert_fp32_bf16(intermediate.data(), bf_2, size);
-}
-
-void vnni_swap(float *src, float *dest, size_t K, size_t M) {
-  /*
-  for (size_t l_k = 0; l_k < K - (K % 2); l_k += 2) {
-    for (size_t l_m = 0; l_m < M; l_m++) {
-      dest[l_k / 2][l_m][0] = src[l_k][l_m];
-      dest[l_k / 2][l_m][1] = src[l_k + 1][l_m];
-    }
-  }
-  */
-
-  for (size_t l_k = 0; l_k < K; l_k += 2) {
-    for (size_t l_m = 0; l_m < M; l_m++) {
-      dest[2 * l_m + l_k * M] = src[l_m + l_k * M];
-      dest[2 * l_m + l_k * M + 1] = src[l_m + (l_k + 1) * M];
-    }
-  }
-
-  if (K % 2) {
-    for (size_t l_m = 0; l_m < M; l_m++) {
-      dest[2 * l_m + (K - 1) * M] = src[l_m + (K - 1) * M];
-      dest[2 * l_m + (K - 1) * M + 1] = 0;
-    }
-  }
 }
