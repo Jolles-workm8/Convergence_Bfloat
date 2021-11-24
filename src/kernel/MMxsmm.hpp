@@ -23,14 +23,10 @@ void gen_bf_matrices(float *src, libxsmm_bfloat16 *bf_0, libxsmm_bfloat16 *bf_1,
 
 template <typename T>
 void vnni_swap(T *src, T *dest, size_t K, size_t M) {
-  /*
-  for (size_t l_k = 0; l_k < K - (K % 2); l_k += 2) {
-    for (size_t l_m = 0; l_m < M; l_m++) {
-      dest[l_k / 2][l_m][0] = src[l_k][l_m];
-      dest[l_k / 2][l_m][1] = src[l_k + 1][l_m];
-    }
+  if (K % 2) {
+    std::cerr << "Error: can't convert matrices with uneven k to vnni-format"
+              << std::endl;
   }
-  */
 
   for (size_t l_k = 0; l_k < K; l_k += 2) {
     for (size_t l_m = 0; l_m < M; l_m++) {
