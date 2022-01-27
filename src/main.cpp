@@ -32,10 +32,10 @@ int main() {
 
    */
 
-  std::vector<std::string> header_csv = {
-      "fp32", "2xbf_3", "2xbf_3d", "3xbf_6", "3xbf_6d", "3xbf_9", "3xbf_9d"};
+  std::vector<std::string> header_csv = {"fp64", "fp32", "Z0", "Z1",
+                                         "Z2",   "Z3",   "Z4"};
 
-  size_t i_iter = 1000;
+  size_t i_iter = 10000;
 
   std::cout << "###################################" << std::endl;
   std::cout << "### Bfloat-16 Error Bounds      ###" << std::endl;
@@ -100,13 +100,13 @@ int main() {
   for (unsigned int i = 2; i <= 16; i *= 2) {
     std::cout << "      i = " << i << '\n';
     Setup *vector = new Setup(1, i, 1);
-    vector->random_normal(0, 1);
+    vector->random_uniform(1, 2);
     for (size_t j = 0; j < i_iter; j++) {
       if (j % 100 == 0) {
         std::cout << "*" << std::flush;
       }
       vector->GEMM();
-      vector->XSMM();
+      // vector->XSMM();
     }
 
     std::cout << '\n';

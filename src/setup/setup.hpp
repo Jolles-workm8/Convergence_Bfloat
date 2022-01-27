@@ -34,12 +34,15 @@ class Setup {
 
   std::vector<float> l_a;
   std::vector<float> l_b;
-
+  
   std::vector<double> l_c_ref_fp64;
   std::vector<float> l_c_ref_fp32;
-  std::vector<float> l_c_bf_3;
-  std::vector<float> l_c_bf_6;
-  std::vector<float> l_c_bf_9;
+  std::vector<float> l_c_bf_Z0;
+  std::vector<float> l_c_bf_Z1;
+  std::vector<float> l_c_bf_Z2;
+  std::vector<float> l_c_bf_Z3;
+  std::vector<float> l_c_bf_Z4;
+
 
   Setup(size_t i_m, size_t i_n, size_t i_k);
 

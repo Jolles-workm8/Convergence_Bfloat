@@ -74,7 +74,7 @@ TEST_CASE("Small int GeMM with libxsmm", "[small][int]") {
   float c_bf[4] = {0, 0, 0, 0};
   float c_ref[4] = {0, 0, 0, 0};
 
-  MMxsmm_bfloat(a, b, c_bf, 2, 2, 2, 2, 2, 2);
+  MMxsmm_bfloat(a, b, c_bf, 2, 2, 2, 2, 2, 2, 4);
   MMxsmm_svanilla(a, b, c_ref, 2, 2, 2, 2, 2, 2);
 
   for (size_t i = 0; i < 3; i++) {
@@ -88,7 +88,7 @@ TEST_CASE("Small real GeMM with libxsmm", "[small][real]") {
   float c_van[4] = {0, 0, 0, 0};
   float c_ref[4] = {3, 5, 3, 5};
 
-  MMxsmm_bfloat(a, b, c_bf, 2, 2, 2, 2, 2, 2);
+  MMxsmm_bfloat(a, b, c_bf, 2, 2, 2, 2, 2, 2, 4);
   MMxsmm_svanilla(a, b, c_van, 2, 2, 2, 2, 2, 2);
   for (size_t i = 0; i < 4; i++) {
     CHECK(c_ref[i] == c_van[i]);
@@ -100,42 +100,40 @@ TEST_CASE("Big int GeMM with libxsmm", "[big][int]") {
 
   int m, n, k, lda, ldb, ldc;
   int count = 32;
-  n = 20;
-  m = 20;
 
-  // for (n = 1; n < count; n++) {
-  for (k = 2; k < count; k++) {
-    // for (m = 1; m < count; m++) {
-    SECTION("n = " + std::to_string(n) + ", m = " + std::to_string(m) +
-            ", k = " + std::to_string(k)) {
-      lda = m;
-      ldb = k;
-      ldc = m;
+  for (n = 1; n < count; n++) {
+    for (k = 2; k < count; k++) {
+      for (m = 1; m < count; m++) {
+        SECTION("n = " + std::to_string(n) + ", m = " + std::to_string(m) +
+                ", k = " + std::to_string(k)) {
+          lda = m;
+          ldb = k;
+          ldc = m;
 
-      std::vector<float> a(m * k, 0);
-      std::vector<float> b(k * n, 0);
-      std::vector<float> c_ref(m * n, 0);
-      // std::vector<double> c_dref(m * n, 0);
-      // std::vector<float> c_bf(m * n, 0);
-      std::vector<float> c_xsmm(m * n, 0);
-      std::vector<float> c_xsmm_bf(m * n, 0);
+          std::vector<float> a(m * k, 0);
+          std::vector<float> b(k * n, 0);
+          std::vector<float> c_ref(m * n, 0);
+          // std::vector<double> c_dref(m * n, 0);
+          // std::vector<float> c_bf(m * n, 0);
+          std::vector<float> c_xsmm(m * n, 0);
+          std::vector<float> c_xsmm_bf(m * n, 0);
 
-      std::iota(a.begin(), a.end(), 1);
-      std::iota(b.begin(), b.end(), 1);
+          std::iota(a.begin(), a.end(), 1);
+          std::iota(b.begin(), b.end(), 1);
 
-      gemms_ref(a.data(), b.data(), c_ref.data(), m, n, k, lda, ldb, ldc);
+          gemms_ref(a.data(), b.data(), c_ref.data(), m, n, k, lda, ldb, ldc);
 
-      MMxsmm_svanilla(a.data(), b.data(), c_xsmm.data(), m, n, k, lda, ldb,
-                      ldc);
+          MMxsmm_svanilla(a.data(), b.data(), c_xsmm.data(), m, n, k, lda, ldb,
+                          ldc);
 
-      MMxsmm_bfloat(a.data(), b.data(), c_xsmm_bf.data(), m, n, k, lda, ldb,
-                    ldc);
+          MMxsmm_bfloat(a.data(), b.data(), c_xsmm_bf.data(), m, n, k, lda, ldb,
+                        ldc, 2);
 
-      for (size_t i = 0; i < c_ref.size(); i++) {
-        CHECK(c_ref[i] == c_xsmm[i]);
-        CHECK(c_xsmm[i] == c_xsmm_bf[i]);
-        //}
-        // }
+          for (size_t i = 0; i < c_ref.size(); i++) {
+            CHECK(c_ref[i] == c_xsmm[i]);
+            CHECK(c_xsmm[i] == c_xsmm_bf[i]);
+          }
+        }
       }
     }
   }
@@ -149,44 +147,45 @@ TEST_CASE("Big real GeMM with libxsmm", "[big][real]") {
   // Specify the engine and distribution.
   std::mt19937 mersenne_engine{rnd_device()};  // Generates random floats
   std::uniform_real_distribution<float> dist{0, 100};
-  n = 20;
-  m = 20;
-  // for (n = 1; n < count; n++) {
-  for (k = 2; k < count; k++) {
-    // for (m = 1; m < count; m++) {
-    SECTION("n = " + std::to_string(n) + ", m = " + std::to_string(m) +
-            ", k = " + std::to_string(k)) {
-      lda = m;
-      ldb = k;
-      ldc = m;
 
-      std::vector<float> a(m * k, 0);
-      std::vector<float> a_v(m * k, 0);
-      std::vector<float> b(k * n, 0);
-      std::vector<float> c_ref(m * n, 0);
-      std::vector<double> c_dref(m * n, 0);
-      std::vector<float> c_bf(m * n, 0);
-      std::vector<float> c_xsmm(m * n, 0);
-      std::vector<float> c_xsmm_bf(m * n, 0);
+  for (n = 1; n < count; n++) {
+    for (k = 2; k < count; k++) {
+      for (m = 1; m < count; m++) {
+        SECTION("n = " + std::to_string(n) + ", m = " + std::to_string(m) +
+                ", k = " + std::to_string(k)) {
+          lda = m;
+          ldb = k;
+          ldc = m;
 
-      auto gen = [&dist, &mersenne_engine]() { return dist(mersenne_engine); };
+          std::vector<float> a(m * k, 0);
+          std::vector<float> a_v(m * k, 0);
+          std::vector<float> b(k * n, 0);
+          std::vector<float> c_ref(m * n, 0);
+          std::vector<double> c_dref(m * n, 0);
+          std::vector<float> c_bf(m * n, 0);
+          std::vector<float> c_xsmm(m * n, 0);
+          std::vector<float> c_xsmm_bf(m * n, 0);
 
-      generate(a.begin(), a.end(), gen);
-      generate(b.begin(), b.end(), gen);
+          auto gen = [&dist, &mersenne_engine]() {
+            return dist(mersenne_engine);
+          };
 
-      gemms_ref(a.data(), b.data(), c_ref.data(), m, n, k, lda, ldb, ldc);
+          generate(a.begin(), a.end(), gen);
+          generate(b.begin(), b.end(), gen);
 
-      MMxsmm_svanilla(a.data(), b.data(), c_xsmm.data(), m, n, k, lda, ldb,
-                      ldc);
+          gemms_ref(a.data(), b.data(), c_ref.data(), m, n, k, lda, ldb, ldc);
 
-      MMxsmm_bfloat(a.data(), b.data(), c_xsmm_bf.data(), m, n, k, lda, ldb,
-                    ldc);
+          MMxsmm_svanilla(a.data(), b.data(), c_xsmm.data(), m, n, k, lda, ldb,
+                          ldc);
 
-      for (size_t i = 0; i < c_ref.size(); i++) {
-        CHECK(c_ref[i] == Catch::Approx(c_xsmm[i]).epsilon(0.1));
-        CHECK(c_xsmm[i] == Catch::Approx(c_xsmm_bf[i]).epsilon(0.1));
-        // }
-        // }
+          MMxsmm_bfloat(a.data(), b.data(), c_xsmm_bf.data(), m, n, k, lda, ldb,
+                        ldc, 2);
+
+          for (size_t i = 0; i < c_ref.size(); i++) {
+            CHECK(c_ref[i] == Catch::Approx(c_xsmm[i]).epsilon(0.1));
+            CHECK(c_xsmm[i] == Catch::Approx(c_xsmm_bf[i]).epsilon(0.1));
+          }
+        }
       }
     }
   }

@@ -13,9 +13,12 @@ Setup::Setup(size_t i_m, size_t i_n, size_t i_k) {
   l_b.resize(l_k * l_n, 0);
 
   l_c_ref_fp32.resize(l_m * l_n, 0);
-  l_c_bf_3.resize(l_m * l_n, 0);
-  l_c_bf_6.resize(l_m * l_n, 0);
-  l_c_bf_9.resize(l_m * l_n, 0);
+  l_c_ref_fp64.resize(l_m * l_n, 0);
+  l_c_bf_Z0.resize(l_m * l_n, 0);
+  l_c_bf_Z1.resize(l_m * l_n, 0);
+  l_c_bf_Z2.resize(l_m * l_n, 0);
+  l_c_bf_Z3.resize(l_m * l_n, 0);
+  l_c_bf_Z4.resize(l_m * l_n, 0);
 }
 
 Setup::~Setup() {}
@@ -61,15 +64,32 @@ void Setup::GEMM() {
             l_ldb, l_ldc);
   gemms_ref(l_a.data(), l_b.data(), l_c_ref_fp32.data(), l_m, l_n, l_k, l_lda,
             l_ldb, l_ldc);
-  gemm_bfloat(l_a.data(), l_b.data(), l_c_bf_3.data(), l_m, l_n, l_k, l_lda,
+  gemm_bfloat(l_a.data(), l_b.data(), l_c_bf_Z0.data(), l_m, l_n, l_k, l_lda,
+              l_ldb, l_ldc, 0);
+  gemm_bfloat(l_a.data(), l_b.data(), l_c_bf_Z1.data(), l_m, l_n, l_k, l_lda,
+              l_ldb, l_ldc, 1);
+  gemm_bfloat(l_a.data(), l_b.data(), l_c_bf_Z2.data(), l_m, l_n, l_k, l_lda,
+              l_ldb, l_ldc, 2);
+  gemm_bfloat(l_a.data(), l_b.data(), l_c_bf_Z3.data(), l_m, l_n, l_k, l_lda,
               l_ldb, l_ldc, 3);
-  gemm_bfloat(l_a.data(), l_b.data(), l_c_bf_6.data(), l_m, l_n, l_k, l_lda,
-              l_ldb, l_ldc, 6);
-  gemm_bfloat(l_a.data(), l_b.data(), l_c_bf_9.data(), l_m, l_n, l_k, l_lda,
-              l_ldb, l_ldc, 9);
+  gemm_bfloat(l_a.data(), l_b.data(), l_c_bf_Z4.data(), l_m, l_n, l_k, l_lda,
+              l_ldb, l_ldc, 4);
 }
 
 void Setup::XSMM() {
+  MMxsmm_dvanilla(l_a.data(), l_b.data(), l_c_ref_fp64.data(), l_m, l_n, l_k,
+                  l_lda, l_ldb, l_ldc);
   MMxsmm_svanilla(l_a.data(), l_b.data(), l_c_ref_fp32.data(), l_m, l_n, l_k,
                   l_lda, l_ldb, l_ldc);
+
+  MMxsmm_bfloat(l_a.data(), l_b.data(), l_c_bf_Z0.data(), l_m, l_n, l_k, l_lda,
+                l_ldb, l_ldc, 0);
+  MMxsmm_bfloat(l_a.data(), l_b.data(), l_c_bf_Z1.data(), l_m, l_n, l_k, l_lda,
+                l_ldb, l_ldc, 1);
+  MMxsmm_bfloat(l_a.data(), l_b.data(), l_c_bf_Z2.data(), l_m, l_n, l_k, l_lda,
+                l_ldb, l_ldc, 2);
+  MMxsmm_bfloat(l_a.data(), l_b.data(), l_c_bf_Z3.data(), l_m, l_n, l_k, l_lda,
+                l_ldb, l_ldc, 3);
+  MMxsmm_bfloat(l_a.data(), l_b.data(), l_c_bf_Z4.data(), l_m, l_n, l_k, l_lda,
+                l_ldb, l_ldc, 4);
 }

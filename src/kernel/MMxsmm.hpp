@@ -14,9 +14,15 @@ void MMxsmm_svanilla(float const *i_a, float const *i_b, float *io_c,
                      unsigned int i_lda, unsigned int i_ldb,
                      unsigned int i_ldc);
 
+void MMxsmm_dvanilla(float const *i_a, float const *i_b, double *io_c,
+                     unsigned int i_m, unsigned int i_n, unsigned int i_k,
+                     unsigned int i_lda, unsigned int i_ldb,
+                     unsigned int i_ldc);
+
 void MMxsmm_bfloat(float const *i_a, float const *i_b, float *io_c,
                    unsigned int i_m, unsigned int i_n, unsigned int i_k,
-                   unsigned int i_lda, unsigned int i_ldb, unsigned int i_ldc);
+                   unsigned int i_lda, unsigned int i_ldb, unsigned int i_ldc,
+                   unsigned int i_approx_lvl);
 
 void gen_bf_matrices(float *src, libxsmm_bfloat16 *bf_0, libxsmm_bfloat16 *bf_1,
                      libxsmm_bfloat16 *bf_2, unsigned int size);
