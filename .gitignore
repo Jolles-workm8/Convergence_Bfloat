@@ -33,6 +33,8 @@
 
 # User specified excludes
 *.csv
+*.png
+
 build/
 submodules/
 datasets/
