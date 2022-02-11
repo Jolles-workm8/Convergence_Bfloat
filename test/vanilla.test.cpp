@@ -24,7 +24,7 @@ TEST_CASE("GeMM reference kernel", "[ref]") {
     gemms_ref(a.data(), b.data(), c.data(), m, n, k, lda, ldb, ldc);
 
     for (size_t i = 1; i < c.size(); i++) {
-      REQUIRE((c[i] == 0));
+      CHECK((c[i] == 0));
     }
 
     std::fill(a.begin(), a.end(), 1);
@@ -33,13 +33,13 @@ TEST_CASE("GeMM reference kernel", "[ref]") {
     gemms_ref(a.data(), b.data(), c.data(), m, n, k, lda, ldb, ldc);
 
     for (size_t i = 1; i < c.size(); i++) {
-      REQUIRE(c[i] == 32);
+      CHECK(c[i] == 32);
     }
 
     gemms_ref(a.data(), b.data(), c.data(), m, n, k, lda, ldb, ldc);
 
     for (size_t i = 1; i < c.size(); i++) {
-      REQUIRE(c[i] == 64);
+      CHECK(c[i] == 64);
     }
 
     std::fill(a.begin(), a.end(), -1);
@@ -47,7 +47,7 @@ TEST_CASE("GeMM reference kernel", "[ref]") {
     gemms_ref(a.data(), b.data(), c.data(), m, n, k, lda, ldb, ldc);
 
     for (size_t i = 1; i < c.size(); i++) {
-      REQUIRE(c[i] == 32);
+      CHECK(c[i] == 32);
     }
   }
   SECTION("Testing double precision", "double") {
@@ -55,7 +55,7 @@ TEST_CASE("GeMM reference kernel", "[ref]") {
     gemmd_ref(a.data(), b.data(), c.data(), m, n, k, lda, ldb, ldc);
 
     for (size_t i = 1; i < c.size(); i++) {
-      REQUIRE((c[i] == 0));
+      CHECK((c[i] == 0));
     }
 
     std::fill(a.begin(), a.end(), 1);
@@ -64,13 +64,13 @@ TEST_CASE("GeMM reference kernel", "[ref]") {
     gemmd_ref(a.data(), b.data(), c.data(), m, n, k, lda, ldb, ldc);
 
     for (size_t i = 1; i < c.size(); i++) {
-      REQUIRE(c[i] == 32);
+      CHECK(c[i] == 32);
     }
 
     gemmd_ref(a.data(), b.data(), c.data(), m, n, k, lda, ldb, ldc);
 
     for (size_t i = 1; i < c.size(); i++) {
-      REQUIRE(c[i] == 64);
+      CHECK(c[i] == 64);
     }
 
     std::fill(a.begin(), a.end(), -1);
@@ -78,7 +78,7 @@ TEST_CASE("GeMM reference kernel", "[ref]") {
     gemmd_ref(a.data(), b.data(), c.data(), m, n, k, lda, ldb, ldc);
 
     for (size_t i = 1; i < c.size(); i++) {
-      REQUIRE(c[i] == 32);
+      CHECK(c[i] == 32);
     }
   }
 }
@@ -98,40 +98,40 @@ TEST_CASE("Testing bfloat kernel", "[bfloat]") {
   std::vector<float> c_ref(m * k, 0);
 
   SECTION("Testing integer numbers") {
-    gemm_bfloat(a.data(), b.data(), c.data(), m, n, k, lda, ldb, ldc, 6);
+    gemm_bfloat(a.data(), b.data(), c.data(), m, n, k, lda, ldb, ldc, 2);
 
     for (size_t i = 1; i < c.size(); i++) {
-      REQUIRE((c[i] == 0));
+      CHECK((c[i] == 0));
     }
 
     std::fill(a.begin(), a.end(), 1);
     std::fill(b.begin(), b.end(), 1);
 
-    gemm_bfloat(a.data(), b.data(), c.data(), m, n, k, lda, ldb, ldc, 6);
+    gemm_bfloat(a.data(), b.data(), c.data(), m, n, k, lda, ldb, ldc, 2);
 
     for (size_t i = 1; i < c.size(); i++) {
-      REQUIRE(c[i] == 32);
+      CHECK(c[i] == 32);
     }
 
-    gemm_bfloat(a.data(), b.data(), c.data(), m, n, k, lda, ldb, ldc, 6);
+    gemm_bfloat(a.data(), b.data(), c.data(), m, n, k, lda, ldb, ldc, 2);
 
     for (size_t i = 1; i < c.size(); i++) {
-      REQUIRE(c[i] == 64);
+      CHECK(c[i] == 64);
     }
 
     std::fill(a.begin(), a.end(), -1);
 
-    gemm_bfloat(a.data(), b.data(), c.data(), m, n, k, lda, ldb, ldc, 6);
+    gemm_bfloat(a.data(), b.data(), c.data(), m, n, k, lda, ldb, ldc, 2);
 
     for (size_t i = 1; i < c.size(); i++) {
-      REQUIRE(c[i] == 32);
+      CHECK(c[i] == 32);
     }
   }
   SECTION("Compare with reference kernel") {
     // First create an instance of an engine.
     std::random_device rnd_device;
     // Specify the engine and distribution.
-    std::mt19937 mersenne_engine{rnd_device()};  // Generates random floats
+    std::mt19937 mersenne_engine{rnd_device()}; // Generates random floats
     std::uniform_real_distribution<float> dist{0, 1};
 
     auto gen = [&dist, &mersenne_engine]() { return dist(mersenne_engine); };
@@ -140,11 +140,11 @@ TEST_CASE("Testing bfloat kernel", "[bfloat]") {
       generate(a.begin(), a.end(), gen);
       generate(b.begin(), b.end(), gen);
 
-      gemm_bfloat(a.data(), b.data(), c.data(), m, n, k, lda, ldb, ldc, 6);
+      gemm_bfloat(a.data(), b.data(), c.data(), m, n, k, lda, ldb, ldc, 2);
       gemms_ref(a.data(), b.data(), c_ref.data(), m, n, k, lda, ldb, ldc);
 
       for (size_t i = 1; i < c.size(); i++) {
-        REQUIRE(c[i] == c_ref[i]);
+        CHECK(c[i] == Catch::Approx(c_ref[i]).epsilon(0.1));
       }
     }
   }

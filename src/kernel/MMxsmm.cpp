@@ -6,7 +6,7 @@ void MMxsmm_svanilla(float const *i_a, float const *i_b, float *io_c,
                      unsigned int i_ldc) {
   int flags = LIBXSMM_GEMM_FLAGS('N', 'N');
   const float alpha = 1;
-  const float beta = 1;
+  const float beta = 0;
   /*
     libxsmm_smmfunction kernel = libxsmm_smmdispatch(
         i_m, i_n, i_k, NULL, NULL, NULL, &beta, &alpha, &flags, NULL);
@@ -35,7 +35,7 @@ void MMxsmm_dvanilla(float const *i_a, float const *i_b, double *io_c,
                      unsigned int i_ldc) {
   int flags = LIBXSMM_GEMM_FLAGS('N', 'N');
   const double alpha = 1;
-  const double beta = 1;
+  const double beta = 0;
 
   double *l_a;
   double *l_b;
@@ -78,6 +78,11 @@ void MMxsmm_bfloat(float const *i_a, float const *i_b, float *io_c,
   std::vector<float> l_a;
   std::vector<float> temp_a;
   std::vector<float> l_b;
+
+#pragma omp simd
+  for (size_t i = 0; i < i_m * i_n; i++) {
+    io_c[i] = 0;
+  }
 
   if (i_k % 2 == 1) {
     l_a.resize((i_k + 1) * i_m, 0);
@@ -124,24 +129,22 @@ void MMxsmm_bfloat(float const *i_a, float const *i_b, float *io_c,
   gen_bf_matrices(l_a.data(), l_a0, l_a1, l_a2, i_m * i_k);
   gen_bf_matrices(l_b.data(), l_b0, l_b1, l_b2, i_n * i_k);
 
-  if (i_approx_lvl < 5) {
-    kernel(l_a2, l_b2, io_c);
+  kernel(l_a0, l_b0, io_c);
+  if (i_approx_lvl > 0) {
+    kernel(l_a0, l_b1, io_c);
+    kernel(l_a1, l_b0, io_c);
   }
-  if (i_approx_lvl < 4) {
-    kernel(l_a1, l_b2, io_c);
-    kernel(l_a2, l_b1, io_c);
-  }
-  if (i_approx_lvl < 3) {
+  if (i_approx_lvl > 1) {
     kernel(l_a1, l_b1, io_c);
     kernel(l_a0, l_b2, io_c);
     kernel(l_a2, l_b0, io_c);
   }
-  if (i_approx_lvl < 2) {
-    kernel(l_a0, l_b1, io_c);
-    kernel(l_a1, l_b0, io_c);
+  if (i_approx_lvl > 2) {
+    kernel(l_a1, l_b2, io_c);
+    kernel(l_a2, l_b1, io_c);
   }
-  if (i_approx_lvl < 1) {
-    kernel(l_a0, l_b0, io_c);
+  if (i_approx_lvl > 3) {
+    kernel(l_a2, l_b2, io_c);
   }
 }
 

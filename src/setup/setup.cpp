@@ -19,6 +19,12 @@ Setup::Setup(size_t i_m, size_t i_n, size_t i_k) {
   l_c_bf_Z2.resize(l_m * l_n, 0);
   l_c_bf_Z3.resize(l_m * l_n, 0);
   l_c_bf_Z4.resize(l_m * l_n, 0);
+
+  l_c_bf_Z0_d.resize(l_m * l_n, 0);
+  l_c_bf_Z1_d.resize(l_m * l_n, 0);
+  l_c_bf_Z2_d.resize(l_m * l_n, 0);
+  l_c_bf_Z3_d.resize(l_m * l_n, 0);
+  l_c_bf_Z4_d.resize(l_m * l_n, 0);
 }
 
 Setup::~Setup() {}
@@ -27,7 +33,7 @@ void Setup::random_expo(float lambda) {
   // First create an instance of an engine.
   std::random_device rnd_device;
   // Specify the engine and distribution.
-  std::mt19937 mersenne_engine{rnd_device()};  // Generates random floats
+  std::mt19937 mersenne_engine{rnd_device()}; // Generates random floats
   std::exponential_distribution<float> dist{lambda};
 
   auto gen = [&dist, &mersenne_engine]() { return dist(mersenne_engine); };
@@ -39,7 +45,7 @@ void Setup::random_uniform(float i_min, float i_max) {
   // First create an instance of an engine.
   std::random_device rnd_device;
   // Specify the engine and distribution.
-  std::mt19937 mersenne_engine{rnd_device()};  // Generates random floats
+  std::mt19937 mersenne_engine{rnd_device()}; // Generates random floats
   std::uniform_real_distribution<float> dist{i_min, i_max};
 
   auto gen = [&dist, &mersenne_engine]() { return dist(mersenne_engine); };
@@ -51,7 +57,7 @@ void Setup::random_normal(float i_mean, float i_var) {
   // First create an instance of an engine.
   std::random_device rnd_device;
   // Specify the engine and distribution.
-  std::mt19937 mersenne_engine{rnd_device()};  // Generates random floats
+  std::mt19937 mersenne_engine{rnd_device()}; // Generates random floats
   std::normal_distribution<float> dist{i_mean, i_var};
 
   auto gen = [&dist, &mersenne_engine]() { return dist(mersenne_engine); };
@@ -59,20 +65,34 @@ void Setup::random_normal(float i_mean, float i_var) {
   generate(l_b.begin(), l_b.end(), gen);
 }
 
+void Setup::set_value(float alpha) {
+  std::fill(l_a.begin(), l_a.end(), alpha);
+  std::fill(l_b.begin(), l_b.end(), alpha);
+}
+
+void Setup::truncate() {
+  for (size_t i = 0; i < l_a.size(); i++) {
+    l_a.at(i) = float_to_bfloat_trunc(l_a.at(i));
+  }
+  for (size_t i = 0; i < l_a.size(); i++) {
+    l_b.at(i) = float_to_bfloat_trunc(l_b.at(i));
+  }
+}
+
 void Setup::GEMM() {
   gemmd_ref(l_a.data(), l_b.data(), l_c_ref_fp64.data(), l_m, l_n, l_k, l_lda,
             l_ldb, l_ldc);
   gemms_ref(l_a.data(), l_b.data(), l_c_ref_fp32.data(), l_m, l_n, l_k, l_lda,
             l_ldb, l_ldc);
-  gemm_bfloat(l_a.data(), l_b.data(), l_c_bf_Z0.data(), l_m, l_n, l_k, l_lda,
+  gemm_bfloat(l_a.data(), l_b.data(), l_c_bf_Z0_d.data(), l_m, l_n, l_k, l_lda,
               l_ldb, l_ldc, 0);
-  gemm_bfloat(l_a.data(), l_b.data(), l_c_bf_Z1.data(), l_m, l_n, l_k, l_lda,
+  gemm_bfloat(l_a.data(), l_b.data(), l_c_bf_Z1_d.data(), l_m, l_n, l_k, l_lda,
               l_ldb, l_ldc, 1);
-  gemm_bfloat(l_a.data(), l_b.data(), l_c_bf_Z2.data(), l_m, l_n, l_k, l_lda,
+  gemm_bfloat(l_a.data(), l_b.data(), l_c_bf_Z2_d.data(), l_m, l_n, l_k, l_lda,
               l_ldb, l_ldc, 2);
-  gemm_bfloat(l_a.data(), l_b.data(), l_c_bf_Z3.data(), l_m, l_n, l_k, l_lda,
+  gemm_bfloat(l_a.data(), l_b.data(), l_c_bf_Z3_d.data(), l_m, l_n, l_k, l_lda,
               l_ldb, l_ldc, 3);
-  gemm_bfloat(l_a.data(), l_b.data(), l_c_bf_Z4.data(), l_m, l_n, l_k, l_lda,
+  gemm_bfloat(l_a.data(), l_b.data(), l_c_bf_Z4_d.data(), l_m, l_n, l_k, l_lda,
               l_ldb, l_ldc, 4);
 }
 

@@ -18,12 +18,12 @@ std::vector<double> measure_total(Setup *classname) {
 
 std::vector<double> measure_frobenius(Setup *classname) {
   std::vector<double> c_frobenius = {
-      total_error(classname->l_c_ref_fp64, classname->l_c_ref_fp32),
-      total_error(classname->l_c_ref_fp64, classname->l_c_bf_Z0),
-      total_error(classname->l_c_ref_fp64, classname->l_c_bf_Z1),
-      total_error(classname->l_c_ref_fp64, classname->l_c_bf_Z2),
-      total_error(classname->l_c_ref_fp64, classname->l_c_bf_Z3),
-      total_error(classname->l_c_ref_fp64, classname->l_c_bf_Z4)};
+      frobenius_error(classname->l_c_ref_fp32, classname->l_c_ref_fp64),
+      frobenius_error(classname->l_c_bf_Z0, classname->l_c_ref_fp64),
+      frobenius_error(classname->l_c_bf_Z1, classname->l_c_ref_fp64),
+      frobenius_error(classname->l_c_bf_Z2, classname->l_c_ref_fp64),
+      frobenius_error(classname->l_c_bf_Z3, classname->l_c_ref_fp64),
+      frobenius_error(classname->l_c_bf_Z4, classname->l_c_ref_fp64)};
 
   return c_frobenius;
 }

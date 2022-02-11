@@ -16,8 +16,8 @@
 #include "vanilla.hpp"
 
 class Setup {
- private:
- public:
+private:
+public:
   size_t l_m = 0;
   size_t l_n = 0;
   size_t l_k = 0;
@@ -34,7 +34,7 @@ class Setup {
 
   std::vector<float> l_a;
   std::vector<float> l_b;
-  
+
   std::vector<double> l_c_ref_fp64;
   std::vector<float> l_c_ref_fp32;
   std::vector<float> l_c_bf_Z0;
@@ -43,6 +43,11 @@ class Setup {
   std::vector<float> l_c_bf_Z3;
   std::vector<float> l_c_bf_Z4;
 
+  std::vector<double> l_c_bf_Z0_d;
+  std::vector<double> l_c_bf_Z1_d;
+  std::vector<double> l_c_bf_Z2_d;
+  std::vector<double> l_c_bf_Z3_d;
+  std::vector<double> l_c_bf_Z4_d;
 
   Setup(size_t i_m, size_t i_n, size_t i_k);
 
@@ -53,6 +58,10 @@ class Setup {
   void random_uniform(float i_min, float i_max);
 
   void random_normal(float i_mean, float i_var);
+
+  void set_value(float alpha);
+
+  void truncate();
 
   void GEMM();
 

@@ -100,39 +100,38 @@ TEST_CASE("Big int GeMM with libxsmm", "[big][int]") {
 
   int m, n, k, lda, ldb, ldc;
   int count = 32;
-  for (size_t approx = 0; approx < 4; approx++) {
-    for (n = 1; n < count; n++) {
-      for (k = 2; k < count; k++) {
-        for (m = 1; m < count; m++) {
-          SECTION("n = " + std::to_string(n) + ", m = " + std::to_string(m) +
-                  ", k = " + std::to_string(k)) {
-            lda = m;
-            ldb = k;
-            ldc = m;
 
-            std::vector<float> a(m * k, 0);
-            std::vector<float> b(k * n, 0);
-            std::vector<float> c_ref(m * n, 0);
-            // std::vector<double> c_dref(m * n, 0);
-            // std::vector<float> c_bf(m * n, 0);
-            std::vector<float> c_xsmm(m * n, 0);
-            std::vector<float> c_xsmm_bf(m * n, 0);
+  for (n = 1; n < count; n++) {
+    for (k = 2; k < count; k++) {
+      for (m = 1; m < count; m++) {
+        SECTION("n = " + std::to_string(n) + ", m = " + std::to_string(m) +
+                ", k = " + std::to_string(k)) {
+          lda = m;
+          ldb = k;
+          ldc = m;
 
-            std::iota(a.begin(), a.end(), 1);
-            std::iota(b.begin(), b.end(), 1);
+          std::vector<float> a(m * k, 0);
+          std::vector<float> b(k * n, 0);
+          std::vector<float> c_ref(m * n, 0);
+          // std::vector<double> c_dref(m * n, 0);
+          // std::vector<float> c_bf(m * n, 0);
+          std::vector<float> c_xsmm(m * n, 0);
+          std::vector<float> c_xsmm_bf(m * n, 0);
 
-            gemms_ref(a.data(), b.data(), c_ref.data(), m, n, k, lda, ldb, ldc);
+          std::iota(a.begin(), a.end(), 1);
+          std::iota(b.begin(), b.end(), 1);
 
-            MMxsmm_svanilla(a.data(), b.data(), c_xsmm.data(), m, n, k, lda,
-                            ldb, ldc);
+          gemms_ref(a.data(), b.data(), c_ref.data(), m, n, k, lda, ldb, ldc);
 
-            MMxsmm_bfloat(a.data(), b.data(), c_xsmm_bf.data(), m, n, k, lda,
-                          ldb, ldc, approx);
+          MMxsmm_svanilla(a.data(), b.data(), c_xsmm.data(), m, n, k, lda, ldb,
+                          ldc);
 
-            for (size_t i = 0; i < c_ref.size(); i++) {
-              CHECK(c_ref[i] == c_xsmm[i]);
-              CHECK(c_xsmm[i] == c_xsmm_bf[i]);
-            }
+          MMxsmm_bfloat(a.data(), b.data(), c_xsmm_bf.data(), m, n, k, lda, ldb,
+                        ldc, 2);
+
+          for (size_t i = 0; i < c_ref.size(); i++) {
+            CHECK(c_ref[i] == c_xsmm[i]);
+            CHECK(c_xsmm[i] == c_xsmm_bf[i]);
           }
         }
       }

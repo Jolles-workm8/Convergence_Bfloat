@@ -16,10 +16,9 @@ void gemmd_ref(float const *i_a, float const *i_b, double *io_c,
                unsigned int i_m, unsigned int i_n, unsigned int i_k,
                unsigned int i_lda, unsigned int i_ldb, unsigned int i_ldc);
 template <typename T>
-void gemm_bfloat(T const *i_a, float const *i_b, float *io_c,
-                 unsigned int i_m, unsigned int i_n, unsigned int i_k,
-                 unsigned int i_lda, unsigned int i_ldb, unsigned int i_ldc,
-                 int i_approx_lvl) {
+void gemm_bfloat(float const *i_a, float const *i_b, T *io_c, unsigned int i_m,
+                 unsigned int i_n, unsigned int i_k, unsigned int i_lda,
+                 unsigned int i_ldb, unsigned int i_ldc, int i_approx_lvl) {
 #pragma omp parallel for
   for (size_t l_m = 0; l_m < i_m; l_m++) {
     for (size_t l_n = 0; l_n < i_n; l_n++) {
