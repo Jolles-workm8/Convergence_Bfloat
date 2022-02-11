@@ -35,3 +35,4 @@
 *.csv
 build/
 submodules/
+datasets/
