@@ -129,23 +129,23 @@ void MMxsmm_bfloat(float const *i_a, float const *i_b, float *io_c,
   gen_bf_matrices(l_a.data(), l_a0, l_a1, l_a2, i_m * i_k);
   gen_bf_matrices(l_b.data(), l_b0, l_b1, l_b2, i_n * i_k);
 
-  kernel(l_a0, l_b0, io_c);
-  if (i_approx_lvl > 0) {
-    kernel(l_a0, l_b1, io_c);
-    kernel(l_a1, l_b0, io_c);
+  if (i_approx_lvl > 3) {
+    kernel(l_a2, l_b2, io_c);
+  }
+  if (i_approx_lvl > 2) {
+    kernel(l_a1, l_b2, io_c);
+    kernel(l_a2, l_b1, io_c);
   }
   if (i_approx_lvl > 1) {
     kernel(l_a1, l_b1, io_c);
     kernel(l_a0, l_b2, io_c);
     kernel(l_a2, l_b0, io_c);
   }
-  if (i_approx_lvl > 2) {
-    kernel(l_a1, l_b2, io_c);
-    kernel(l_a2, l_b1, io_c);
+  if (i_approx_lvl > 0) {
+    kernel(l_a0, l_b1, io_c);
+    kernel(l_a1, l_b0, io_c);
   }
-  if (i_approx_lvl > 3) {
-    kernel(l_a2, l_b2, io_c);
-  }
+  kernel(l_a0, l_b0, io_c);
 }
 
 void gen_bf_matrices(float *src, libxsmm_bfloat16 *bf_0, libxsmm_bfloat16 *bf_1,
@@ -153,7 +153,8 @@ void gen_bf_matrices(float *src, libxsmm_bfloat16 *bf_0, libxsmm_bfloat16 *bf_1,
   std::vector<float> intermediate(size, 0);
   std::vector<float> copy(size, 0);
 
-  libxsmm_rne_convert_fp32_bf16(src, bf_0, size);
+  //libxsmm_rne_convert_fp32_bf16(src, bf_0, size);
+  libxsmm_truncate_convert_f32_bf16(src, bf_0, size);
   libxsmm_convert_bf16_f32(bf_0, copy.data(), size);
 
 #pragma omp simd
@@ -161,11 +162,13 @@ void gen_bf_matrices(float *src, libxsmm_bfloat16 *bf_0, libxsmm_bfloat16 *bf_1,
     intermediate[i] = src[i] - copy[i];
   }
 
-  libxsmm_rne_convert_fp32_bf16(intermediate.data(), bf_1, size);
+  //libxsmm_rne_convert_fp32_bf16(intermediate.data(), bf_1, size);
+  libxsmm_truncate_convert_f32_bf16(intermediate.data(), bf_1, size);
   libxsmm_convert_bf16_f32(bf_1, copy.data(), size);
 #pragma omp simd
   for (size_t i = 0; i < size; i++) {
     intermediate[i] -= copy[i];
   }
-  libxsmm_rne_convert_fp32_bf16(intermediate.data(), bf_2, size);
+  //libxsmm_rne_convert_fp32_bf16(intermediate.data(), bf_2, size);
+  libxsmm_truncate_convert_f32_bf16(intermediate.data(), bf_2, size);
 }

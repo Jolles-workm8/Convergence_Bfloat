@@ -13,4 +13,4 @@ else()
     target_link_libraries(MMxsmm.test LINK_PUBLIC Catch2::Catch2WithMain MMxsmm vanilla)
 endif()
 
-target_link_libraries(bfloat.test LINK_PUBLIC Catch2::Catch2WithMain bfloat)
+target_link_libraries(bfloat.test LINK_PUBLIC Catch2::Catch2WithMain MMxsmm bfloat vector_bf xsmm m pthread dl c lapack blas lapack)

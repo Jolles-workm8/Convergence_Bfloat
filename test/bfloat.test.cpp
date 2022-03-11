@@ -1,4 +1,6 @@
 #include "bfloat.hpp"
+#include "vector_bfloat.hpp"
+#include "MMxsmm.hpp"
 
 #include <bitset>
 #include <catch2/catch_all.hpp>
@@ -8,6 +10,8 @@
 #include <limits>
 #include <random>
 #include <vector>
+#include <libxsmm.h>
+
 
 TEST_CASE("Float to BFloat", "[number]") {
   float a;
@@ -136,4 +140,42 @@ TEST_CASE("Float to Bfloat Vector", "[vector]") {
     v_round = float_to_3xbfloat_vector(a);
     v_intr = float_to_3xbfloat_vector_intr(a);
   }
+}
+
+TEST_CASE("Decomposition with vector instructions", "[vector_instr]"){
+   
+    float a[2050];
+    //generate some odd flaoting point values without randomization
+    for (size_t i = 0; i < 2050; i++)
+    {
+      a[i] =i*0.212;
+    }
+    
+    libxsmm_bfloat16 bf0[2][2050];
+    libxsmm_bfloat16 bf1[2][2050];
+    libxsmm_bfloat16 bf2[2][2050];
+    float fp_bf0[2][2050];
+    float fp_bf1[2][2050];
+    float fp_bf2[2][2050];
+    
+
+    split_compress(a, bf0[0], bf1[0], bf2[0], 2050);
+    gen_bf_matrices(a, bf0[1], bf1[1], bf2[1], 2050);
+
+    for (size_t i = 0; i < 2; i++)
+    {
+    libxsmm_convert_bf16_f32(bf0[i], fp_bf0[i], 2050);
+    libxsmm_convert_bf16_f32(bf1[i], fp_bf1[i], 2050);
+    libxsmm_convert_bf16_f32(bf2[i], fp_bf2[i], 2050);    
+    }
+    
+    
+
+
+    for (size_t i = 0; i < 2050; i++)
+    {
+      CHECK(fp_bf0[0][i]==fp_bf0[1][i]);
+      CHECK(fp_bf1[0][i]==fp_bf1[1][i]);
+      CHECK(fp_bf2[0][i]==fp_bf2[1][i]);
+    }
 }

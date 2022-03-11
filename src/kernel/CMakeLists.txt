@@ -10,6 +10,9 @@ set_target_properties(MMxsmm PROPERTIES LINKER_LANGUAGE CXX)
 add_library(vanilla vanilla.cpp)
 set_target_properties(vanilla PROPERTIES LINKER_LANGUAGE CXX)
 
+add_library(vector_bf vector_bfloat.hpp)
+set_target_properties(vector_bf PROPERTIES LINKER_LANGUAGE CXX)
+
 find_package(OpenMP)
 
 link_directories(${CMAKE_CURRENT_SOURCE_DIR}/submodules/libxsmm/lib)
@@ -22,6 +25,7 @@ else()
 endif()
 
 target_link_libraries(MMxsmm xsmm m pthread dl c lapack blas lapack)
+target_link_libraries(vector_bf xsmm m pthread dl c lapack blas lapack)
 
 # Make sure the compiler can find include files for our libraries 
 # when other libraries or executables link to them

@@ -59,7 +59,7 @@ int main() {
                                               header_csv.end());
 
     for (size_t j = 0; j < i_iter; j++) {
-      matrix->random_uniform(-1, 1);
+      matrix->random_uniform(0, 2147483647);
       matrix->XSMM();
       // matrix->GEMM();
 
